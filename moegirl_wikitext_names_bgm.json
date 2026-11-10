@@ -1,0 +1,1333 @@
+{
+ "J铃木": null,
+ "REI(零的日常)": null,
+ "Tera子 Giga子 Mega子": null,
+ "一河角乃": {
+  "kana": "ゴジュウユニコーン／いちかわ すみの",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170769",
+  "bgm_name": "ゴジュウユニコーン／一河角乃"
+ },
+ "一色伊吕波": {
+  "kana": "いっしき いろは",
+  "latin": "Isshiki Iroha",
+  "latin_converted": "Isshiki Iroha",
+  "source": "bangumi",
+  "bgm_id": "26090",
+  "bgm_name": "一色いろは"
+ },
+ "三池苗子": {
+  "kana": "みいけ なえこ",
+  "latin": "Miike Naeko",
+  "latin_converted": "Miike Naeko",
+  "source": "bangumi-kana",
+  "bgm_id": "17783",
+  "bgm_name": "三池苗子"
+ },
+ "三浦优美子": {
+  "kana": "みうら ゆみこ",
+  "latin": "Miura Yumiko",
+  "latin_converted": "Miura Yumiko",
+  "source": "bangumi",
+  "bgm_id": "21587",
+  "bgm_name": "三浦優美子"
+ },
+ "上原由衣": {
+  "kana": "うえはら ゆい",
+  "latin": "Uehara Yui",
+  "latin_converted": "Uehara Yui",
+  "source": "bangumi",
+  "bgm_id": "7102",
+  "bgm_name": "上原由衣"
+ },
+ "不知火衣": null,
+ "世良玛丽": {
+  "kana": "あかい めありー",
+  "latin": "Akai Mearī",
+  "latin_converted": "Akai Mearii",
+  "source": "bangumi",
+  "bgm_id": "28556",
+  "bgm_name": "赤井メアリー",
+  "latin_differs": true
+ },
+ "世良真纯": {
+  "kana": "せら ますみ",
+  "latin": "Sera Masumi",
+  "latin_converted": "Sera Masumi",
+  "source": "bangumi",
+  "bgm_id": "27133",
+  "bgm_name": "世良真純"
+ },
+ "东云悟": null,
+ "东尾玛丽亚": null,
+ "中森银三": {
+  "kana": "なかもり ぎんぞ",
+  "latin": "Nakamori Ginzou",
+  "latin_converted": "Nakamori Ginzo",
+  "source": "bangumi",
+  "bgm_id": "7068",
+  "bgm_name": "中森銀三",
+  "latin_differs": true
+ },
+ "中森青子": null,
+ "久远(第一战队豪兽者)": {
+  "kana": "クオン",
+  "latin": "Kuon",
+  "latin_converted": "Kuon",
+  "source": "bangumi-kana",
+  "bgm_id": "22615",
+  "bgm_name": "久遠",
+  "id_fallback": true
+ },
+ "九条玲子": {
+  "kana": "くじょう れいこ",
+  "latin": "Kujou Reiko",
+  "latin_converted": "Kujou Reiko",
+  "source": "bangumi-kana",
+  "bgm_id": "105448",
+  "bgm_name": "九条玲子"
+ },
+ "五色田介人": {
+  "kana": "ごしきだ かいと／ゼンカイザーブラック",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "117255",
+  "bgm_name": "五色田介人／ゼンカイザーブラック"
+ },
+ "五色田介人(暴太郎战队咚兄弟组)": {
+  "kana": "ごしきだ かいと／ゼンカイザーブラック",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "117255",
+  "bgm_name": "五色田介人／ゼンカイザーブラック"
+ },
+ "京极真": {
+  "kana": "きょうごく まこと",
+  "latin": "Kyougoku Makoto",
+  "latin_converted": "Kyougoku Makoto",
+  "source": "bangumi",
+  "bgm_id": "7058",
+  "bgm_name": "京極真"
+ },
+ "伊井野弥子": {
+  "kana": "いいの みこ",
+  "latin": "Iino Miko",
+  "latin_converted": "Iino Miko",
+  "source": "bangumi",
+  "bgm_id": "69198",
+  "bgm_name": "伊井野ミコ"
+ },
+ "伊桑·本堂": null,
+ "伊织无我": {
+  "kana": "いおり むが",
+  "latin": "Iori Muga",
+  "latin_converted": "Iori Muga",
+  "source": "bangumi",
+  "bgm_id": "153971",
+  "bgm_name": "伊織無我"
+ },
+ "伊达航": {
+  "kana": "だて わたる",
+  "latin": "Date Wataru",
+  "latin_converted": "Date Wataru",
+  "source": "bangumi",
+  "bgm_id": "78874",
+  "bgm_name": "伊達航"
+ },
+ "佐仓绫音(天气之子)": {
+  "kana": "さくら アヤネ",
+  "latin": "Sakura Ayane",
+  "latin_converted": "Sakura Ayane",
+  "source": "bangumi",
+  "bgm_id": "72839",
+  "bgm_name": "佐倉アヤネ"
+ },
+ "佐克斯·戈尔德忒克": null,
+ "佐原美代子": {
+  "kana": "さはら みよこ",
+  "latin": "Sahara Miyoko",
+  "latin_converted": "Sahara Miyoko",
+  "source": "bangumi",
+  "bgm_id": "43195",
+  "bgm_name": "佐原みよこ"
+ },
+ "佐藤正义": null,
+ "佐藤美和子": null,
+ "冲矢昴": {
+  "kana": "おきや すばる",
+  "latin": "Okiya Subaru",
+  "latin_converted": "Okiya Subaru",
+  "source": "bangumi",
+  "bgm_id": "181308",
+  "bgm_name": "沖矢昴"
+ },
+ "冲野洋子": {
+  "kana": "おきの ヨーコ",
+  "latin": "Okino Youko",
+  "latin_converted": "Okino Yooko",
+  "source": "bangumi",
+  "bgm_id": "10281",
+  "bgm_name": "沖野ヨーコ",
+  "latin_differs": true
+ },
+ "凯普敦·玛贝拉斯": null,
+ "前学生会长": null,
+ "千叶和伸": null,
+ "千间降代": null,
+ "卡尔瓦多斯": null,
+ "卡玛库拉": null,
+ "史黛西(机界战队全开者)": null,
+ "叶山隼人": {
+  "kana": "はやま はやと",
+  "latin": "Hayama Hayato",
+  "latin_converted": "Hayama Hayato",
+  "source": "bangumi",
+  "bgm_id": "21584",
+  "bgm_name": "葉山隼人"
+ },
+ "吉田步美": {
+  "kana": "よしだ あゆみ",
+  "latin": "Yoshida Ayumi",
+  "latin_converted": "Yoshida Ayumi",
+  "source": "bangumi",
+  "bgm_id": "7045",
+  "bgm_name": "吉田歩美"
+ },
+ "和田阳奈": {
+  "kana": "わだ ひな",
+  "latin": "Wada Hina",
+  "latin_converted": "Wada Hina",
+  "source": "bangumi-kana",
+  "bgm_id": "133655",
+  "bgm_name": "和田陽奈"
+ },
+ "四宫云鹰": null,
+ "四宫辉夜": {
+  "kana": "しのみや かぐや",
+  "latin": "Shinomiya Kaguya",
+  "latin_converted": "Shinomiya Kaguya",
+  "source": "bangumi",
+  "bgm_id": "66899",
+  "bgm_name": "四宮かぐや"
+ },
+ "四宫雁庵": {
+  "kana": "しのみや がんあん",
+  "latin": "Shinomiya Ganan",
+  "latin_converted": "Shinomiya Ganan",
+  "source": "bangumi",
+  "bgm_id": "123847",
+  "bgm_name": "四宮雁庵"
+ },
+ "四条帝": null,
+ "四条真妃": {
+  "kana": "しじょう まき",
+  "latin": "Shijiyou Maki",
+  "latin_converted": "Shijou Maki",
+  "source": "bangumi",
+  "bgm_id": "68538",
+  "bgm_name": "四条眞妃",
+  "latin_differs": true
+ },
+ "圆谷光彦": {
+  "kana": "つぶらや みつひこ",
+  "latin": "Tsuburaya Mitsuhiko",
+  "latin_converted": "Tsuburaya Mitsuhiko",
+  "source": "bangumi",
+  "bgm_id": "7046",
+  "bgm_name": "円谷光彦"
+ },
+ "圆谷朝美": {
+  "kana": "つぶらや あさみ",
+  "latin": "Tsuburaya Asami",
+  "latin_converted": "Tsuburaya Asami",
+  "source": "bangumi",
+  "bgm_id": "193483",
+  "bgm_name": "円谷朝美"
+ },
+ "城回巡": {
+  "kana": "しろめぐり めぐり",
+  "latin": "Shiromeguri Meguri",
+  "latin_converted": "Shiromeguri Meguri",
+  "source": "bangumi",
+  "bgm_id": "28038",
+  "bgm_name": "城廻めぐり"
+ },
+ "基安蒂": null,
+ "基拉·哈斯提": null,
+ "增增妈妈": null,
+ "夜野魁利": {
+  "kana": "ルパンレッド / やの かいり",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170880",
+  "bgm_name": "ルパンレッド / 夜野魁利"
+ },
+ "大佛小钵": {
+  "kana": "おさらぎ こばち",
+  "latin": "Kobachi Osaragi",
+  "latin_converted": "Osaragi Kobachi",
+  "source": "bangumi",
+  "bgm_id": "76289",
+  "bgm_name": "大仏こばち",
+  "latin_differs": true
+ },
+ "大冈红叶": {
+  "kana": "おおおか もみじ",
+  "latin": "Oooka Momiji",
+  "latin_converted": "Oooka Momiji",
+  "source": "bangumi",
+  "bgm_id": "48949",
+  "bgm_name": "大岡紅葉"
+ },
+ "大友京子": {
+  "kana": "おおとも きょうこ",
+  "latin": "Ootomo Kyouko",
+  "latin_converted": "Ootomo Kyouko",
+  "source": "bangumi",
+  "bgm_id": "78139",
+  "bgm_name": "大友京子"
+ },
+ "大和敢助": {
+  "kana": "やまと かんすけ",
+  "latin": "Yamato Kansuke",
+  "latin_converted": "Yamato Kansuke",
+  "source": "bangumi",
+  "bgm_id": "7101",
+  "bgm_name": "大和敢助"
+ },
+ "大泷悟郎": null,
+ "大野稔": null,
+ "天野凪": {
+  "kana": "あまの なぎ",
+  "latin": "Amano Nagi",
+  "latin_converted": "Amano Nagi",
+  "source": "bangumi",
+  "bgm_id": "70548",
+  "bgm_name": "天野凪"
+ },
+ "天野阳菜": {
+  "kana": "あまの ひな",
+  "latin": "Amano Hina",
+  "latin_converted": "Amano Hina",
+  "source": "bangumi",
+  "bgm_id": "68978",
+  "bgm_name": "天野陽菜"
+ },
+ "奔多里奥·奔德拉斯": null,
+ "妃英理": {
+  "kana": "きさき えり",
+  "latin": "Kisaki Eri",
+  "latin_converted": "Kisaki Eri",
+  "source": "bangumi",
+  "bgm_id": "7050",
+  "bgm_name": "妃英理"
+ },
+ "姬野·兰": null,
+ "子安燕": {
+  "kana": "こやす つばめ",
+  "latin": "Koyasu Tsubame",
+  "latin_converted": "Koyasu Tsubame",
+  "source": "bangumi",
+  "bgm_id": "75903",
+  "bgm_name": "子安つばめ"
+ },
+ "安井": null,
+ "安室透": {
+  "kana": "あむろ とおる",
+  "latin": "Bourbon",
+  "latin_converted": "Amuro Tooru",
+  "source": "bangumi",
+  "bgm_id": "17790",
+  "bgm_name": "安室透",
+  "latin_differs": true
+ },
+ "安德雷·卡迈尔": null,
+ "宫本由美": {
+  "kana": "みやもと ゆみ",
+  "latin": "Miyamoto Yumi",
+  "latin_converted": "Miyamoto Yumi",
+  "source": "bangumi",
+  "bgm_id": "7067",
+  "bgm_name": "宮本由美"
+ },
+ "宫野厚司": null,
+ "宫野明美": {
+  "kana": "みやの あけみ",
+  "latin": "Miyano Akemi",
+  "latin_converted": "Miyano Akemi",
+  "source": "bangumi",
+  "bgm_id": "7586",
+  "bgm_name": "宮野明美"
+ },
+ "宫野艾莲娜": null,
+ "宵町透真": {
+  "kana": "ルパンブルー / よいまち とま",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170882",
+  "bgm_name": "ルパンブルー / 宵町透真"
+ },
+ "宾加": null,
+ "寺井黄之助": {
+  "kana": "じい こうのすけ",
+  "latin": "Jii Kounosuke",
+  "latin_converted": "Jii Kounosuke",
+  "source": "bangumi",
+  "bgm_id": "129822",
+  "bgm_name": "寺井黄之助"
+ },
+ "小岛": null,
+ "小岛元太": {
+  "kana": "こじま げんた",
+  "latin": "Kojima Genta",
+  "latin_converted": "Kojima Genta",
+  "source": "bangumi",
+  "bgm_id": "7047",
+  "bgm_name": "小嶋元太"
+ },
+ "小岛元次": {
+  "kana": "こじまげんじ",
+  "latin": "Kojima Genji",
+  "latin_converted": "Kojimagenji",
+  "source": "bangumi",
+  "bgm_id": "181867",
+  "bgm_name": "小嶋元次"
+ },
+ "小林澄子": null,
+ "小田切敏郎": {
+  "kana": "おだぎり としろう",
+  "latin": "Odagiri Toshirou",
+  "latin_converted": "Odagiri Toshirou",
+  "source": "bangumi-kana",
+  "bgm_id": "172602",
+  "bgm_name": "小田切敏郎"
+ },
+ "小田岛三郎": null,
+ "小野寺丽": {
+  "kana": "おのでら れい",
+  "latin": "Onodera Rei",
+  "latin_converted": "Onodera Rei",
+  "source": "bangumi",
+  "bgm_id": "110866",
+  "bgm_name": "小野寺麗"
+ },
+ "山村操": {
+  "kana": "やまむら ミサオ",
+  "latin": "Yamamura Misao",
+  "latin_converted": "Yamamura Misao",
+  "source": "bangumi",
+  "bgm_id": "7076",
+  "bgm_name": "山村ミサオ"
+ },
+ "山村美砂绘": null,
+ "川井美树": {
+  "kana": "かわい みき",
+  "latin": "Kawai Miki",
+  "latin_converted": "Kawai Miki",
+  "source": "bangumi",
+  "bgm_id": "43196",
+  "bgm_name": "川井みき"
+ },
+ "川崎京华": {
+  "kana": "かわさき けいか",
+  "latin": "Kawasaki Keika",
+  "latin_converted": "Kawasaki Keika",
+  "source": "bangumi-kana",
+  "bgm_id": "31373",
+  "bgm_name": "川崎京華"
+ },
+ "川崎大志": {
+  "kana": "かわさき たいし",
+  "latin": "Kawasaki Taishi",
+  "latin_converted": "Kawasaki Taishi",
+  "source": "bangumi-kana",
+  "bgm_id": "31372",
+  "bgm_name": "川崎大志"
+ },
+ "川崎沙希": {
+  "kana": "かわさき さき",
+  "latin": "Kawasaki Saki",
+  "latin_converted": "Kawasaki Saki",
+  "source": "bangumi-kana",
+  "bgm_id": "21585",
+  "bgm_name": "川崎沙希"
+ },
+ "工藤优作": null,
+ "工藤新一": {
+  "kana": "くどう しんいち",
+  "latin": "Kudou Shinichi",
+  "latin_converted": "Kudou Shinichi",
+  "source": "bangumi",
+  "bgm_id": "3455",
+  "bgm_name": "工藤新一"
+ },
+ "工藤有希子": null,
+ "巨濑艾丽卡": {
+  "kana": "こせ えりか",
+  "latin": "Kose Erika",
+  "latin_converted": "Kose Erika",
+  "source": "bangumi",
+  "bgm_id": "110863",
+  "bgm_name": "巨瀬エリカ"
+ },
+ "布雷多兰": null,
+ "平冢静": {
+  "kana": "ひらつか しずか",
+  "latin": "Hiratsuka Shizuka",
+  "latin_converted": "Hiratsuka Shizuka",
+  "source": "bangumi",
+  "bgm_id": "19219",
+  "bgm_name": "平塚静"
+ },
+ "库拉索(名侦探柯南)": null,
+ "志叶丈瑠": null,
+ "志叶薰": null,
+ "志布户未来": {
+  "kana": "ブンピンク / しふと みら",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170744",
+  "bgm_name": "ブンピンク / 志布戸未来"
+ },
+ "怪盗基德": null,
+ "户冢彩加": {
+  "kana": "とつか さいか",
+  "latin": "Totsuka Saika",
+  "latin_converted": "Totsuka Saika",
+  "source": "bangumi",
+  "bgm_id": "19042",
+  "bgm_name": "戸塚彩加"
+ },
+ "户部翔": {
+  "kana": "とべ かける",
+  "latin": "tobe kakeru",
+  "latin_converted": "Tobe Kakeru",
+  "source": "bangumi",
+  "bgm_id": "28037",
+  "bgm_name": "戸部翔"
+ },
+ "折本佳织": null,
+ "拉克勒斯·哈斯提": null,
+ "振骑玄蕃": {
+  "kana": "ブンオレンジ / ぶれき げんば",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170746",
+  "bgm_name": "ブンオレンジ / 振騎玄蕃"
+ },
+ "新出智明": {
+  "kana": "あらいで ともあき",
+  "latin": "Araide Tomoaki",
+  "latin_converted": "Araide Tomoaki",
+  "source": "bangumi",
+  "bgm_id": "7093",
+  "bgm_name": "新出智明"
+ },
+ "早坂奈央": {
+  "kana": "はやさか なお",
+  "latin": "Hayasaka Nao",
+  "latin_converted": "Hayasaka Nao",
+  "source": "bangumi-kana",
+  "bgm_id": "110629",
+  "bgm_name": "早坂奈央"
+ },
+ "早坂爱": {
+  "kana": "はやさか あい",
+  "latin": "Hayasaka Ai",
+  "latin_converted": "Hayasaka Ai",
+  "source": "bangumi",
+  "bgm_id": "67410",
+  "bgm_name": "早坂愛"
+ },
+ "早见初美花": {
+  "kana": "ルパンイエロー / はやみ うみか",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170884",
+  "bgm_name": "ルパンイエロー / 早見初美花"
+ },
+ "明石晓": null,
+ "明神司": {
+  "kana": "パトレンさんごう / みょじん つかさ",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170885",
+  "bgm_name": "パトレン3号 / 明神つかさ"
+ },
+ "服部平次": {
+  "kana": "はっとり へいじ",
+  "latin": "Hattori Heiji",
+  "latin_converted": "Hattori Heiji",
+  "source": "bangumi",
+  "bgm_id": "7056",
+  "bgm_name": "服部平次"
+ },
+ "服部平藏": {
+  "kana": "はっとり へいぞう",
+  "latin": "Hattori Heizou",
+  "latin_converted": "Hattori Heizou",
+  "source": "bangumi",
+  "bgm_id": "7070",
+  "bgm_name": "服部平蔵"
+ },
+ "服部静华": {
+  "kana": "はっとり しずか",
+  "latin": "Hattori Shizuka",
+  "latin_converted": "Hattori Shizuka",
+  "source": "bangumi",
+  "bgm_id": "17786",
+  "bgm_name": "服部静華"
+ },
+ "朗姆": null,
+ "朝加圭一郎": {
+  "kana": "パトレンいちごう / あさか けいいちろう",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170881",
+  "bgm_name": "パトレン1号 / 朝加圭一郎"
+ },
+ "朝日雫": null,
+ "木之下芙纱绘": null,
+ "本堂瑛祐": {
+  "kana": "ほんどう えいすけ",
+  "latin": "Hondou Eisuke",
+  "latin_converted": "Hondou Eisuke",
+  "source": "bangumi",
+  "bgm_id": "7049",
+  "bgm_name": "本堂瑛祐"
+ },
+ "材木座义辉": null,
+ "来斗": null,
+ "杰拉米·伊多莫纳拉克·内·布拉谢利": null,
+ "松本清长": null,
+ "松田阵平": {
+  "kana": "まつだ じんぺい",
+  "latin": "Matsuda Jinpei",
+  "latin_converted": "Matsuda Jinpei",
+  "source": "bangumi",
+  "bgm_id": "7065",
+  "bgm_name": "松田陣平"
+ },
+ "板仓卓": null,
+ "柏木渚": {
+  "kana": "かしわぎ なぎさ",
+  "latin": "Kashiwagi Nagisa",
+  "latin_converted": "Kashiwagi Nagisa",
+  "source": "bangumi-kana",
+  "bgm_id": "67935",
+  "bgm_name": "柏木渚"
+ },
+ "栗山绿": null,
+ "桃井太郎": {
+  "kana": "ドンモモタロウ / ももい たろう",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "117250",
+  "bgm_name": "ドンモモタロウ / 桃井タロウ"
+ },
+ "桃谷次郎": {
+  "kana": "ドンドラゴクウ / ドントラボルト / ももたに じろう",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "117260",
+  "bgm_name": "ドンドラゴクウ / ドントラボルト / 桃谷ジロウ"
+ },
+ "桐生大五郎": null,
+ "森岛帆高": {
+  "kana": "もりしま ほだか",
+  "latin": "Morishima Hodaka",
+  "latin_converted": "Morishima Hodaka",
+  "source": "bangumi",
+  "bgm_id": "70544",
+  "bgm_name": "森嶋帆高"
+ },
+ "植野直花": {
+  "kana": "うえの なおか",
+  "latin": "Ueno Naoka",
+  "latin_converted": "Ueno Naoka",
+  "source": "bangumi",
+  "bgm_id": "40180",
+  "bgm_name": "植野直花"
+ },
+ "楠田陆道": null,
+ "榎本梓": {
+  "kana": "えのもと あずさ",
+  "latin": "Enomoto Azusa",
+  "latin_converted": "Enomoto Azusa",
+  "source": "bangumi-kana",
+  "bgm_id": "17788",
+  "bgm_name": "榎本梓"
+ },
+ "槙原梢": {
+  "kana": "まきはら こずえ",
+  "latin": "Makihara Kozue",
+  "latin_converted": "Makihara Kozue",
+  "source": "bangumi",
+  "bgm_id": "111783",
+  "bgm_name": "槇原こずえ"
+ },
+ "横沟参悟": {
+  "kana": "よこみぞ さんご",
+  "latin": "Yokomizo Sango",
+  "latin_converted": "Yokomizo Sango",
+  "source": "bangumi",
+  "bgm_id": "17784",
+  "bgm_name": "横溝参悟"
+ },
+ "横沟重悟": {
+  "kana": "よこみぞ じゅうご",
+  "latin": "Yokomizo Juugo",
+  "latin_converted": "Yokomizo Juugo",
+  "source": "bangumi",
+  "bgm_id": "17785",
+  "bgm_name": "横溝重悟"
+ },
+ "橘境子": {
+  "kana": "たちばな きょうこ",
+  "latin": "Tachibana Kyouko",
+  "latin_converted": "Tachibana Kyouko",
+  "source": "bangumi-kana",
+  "bgm_id": "163349",
+  "bgm_name": "橘境子"
+ },
+ "比企谷八幡": {
+  "kana": "ひきがや はちまん",
+  "latin": "Hikigaya Hachiman",
+  "latin_converted": "Hikigaya Hachiman",
+  "source": "bangumi",
+  "bgm_id": "19039",
+  "bgm_name": "比企谷八幡"
+ },
+ "比企谷八幡和小町的母亲": null,
+ "比企谷小町": {
+  "kana": "ひきがや こまち",
+  "latin": "Hikigaya Komachi",
+  "latin_converted": "Hikigaya Komachi",
+  "source": "bangumi",
+  "bgm_id": "19043",
+  "bgm_name": "比企谷小町"
+ },
+ "比护隆佑": {
+  "kana": "ひご りゅうすけ",
+  "latin": "Higo Ryuusuke",
+  "latin_converted": "Higo Ryuusuke",
+  "source": "bangumi-kana",
+  "bgm_id": "17793",
+  "bgm_name": "比護隆佑"
+ },
+ "毛利兰": {
+  "kana": "もうり らん",
+  "latin": "Mouri Ran",
+  "latin_converted": "Mouri Ran",
+  "source": "bangumi",
+  "bgm_id": "3499",
+  "bgm_name": "毛利蘭"
+ },
+ "毛利小五郎": null,
+ "水无怜奈": {
+  "kana": "みずなし れな",
+  "latin": "Mizunashi Rena",
+  "latin_converted": "Mizunashi Rena",
+  "source": "bangumi",
+  "bgm_id": "7105",
+  "bgm_name": "水無怜奈"
+ },
+ "永束友宏": {
+  "kana": "ながつか ともひろ",
+  "latin": "Nagatsuka Tomohiro",
+  "latin_converted": "Nagatsuka Tomohiro",
+  "source": "bangumi",
+  "bgm_id": "40179",
+  "bgm_name": "永束友宏"
+ },
+ "江户川柯南": {
+  "kana": "えどがわこなん",
+  "latin": "Edogawa Conan",
+  "latin_converted": "Edogawakonan",
+  "source": "bangumi",
+  "bgm_id": "3453",
+  "bgm_name": "江戸川コナン",
+  "latin_differs": true
+ },
+ "沼渊己一郎": null,
+ "泽田弘树": null,
+ "浅井成实": {
+  "kana": "あそう せいじ",
+  "latin": "Asou Seiji",
+  "latin_converted": "Asou Seiji",
+  "source": "bangumi",
+  "bgm_id": "17789",
+  "bgm_name": "浅井成実"
+ },
+ "海老名姬菜": null,
+ "灰原哀": {
+  "kana": "みやのしほ",
+  "latin": "Miyano Shiho",
+  "latin_converted": "Miyanoshiho",
+  "source": "bangumi",
+  "bgm_id": "181866",
+  "bgm_name": "宮野志保",
+  "id_fallback": true
+ },
+ "热田充瑠": {
+  "kana": "キラメイレッド / あつた じゅる",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170794",
+  "bgm_name": "キラメイレッド / 熱田充瑠"
+ },
+ "爱尔兰(名侦探柯南)": null,
+ "牙昂": null,
+ "犬冢翼": {
+  "kana": "イヌブラザー / いぬづか つばさ",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "117253",
+  "bgm_name": "イヌブラザー / 犬塚翼"
+ },
+ "犯泽先生": {
+  "kana": "はんざわ まこと",
+  "latin": "Hanzawa Makoto",
+  "latin_converted": "Hanzawa Makoto",
+  "source": "bangumi",
+  "bgm_id": "116013",
+  "bgm_name": "犯沢さん"
+ },
+ "猛原禽次郎": {
+  "kana": "ゴジュウイーグル／たけはら きんじろう",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170768",
+  "bgm_name": "ゴジュウイーグル／猛原禽次郎"
+ },
+ "猿原真一": {
+  "kana": "サルブラザー / さるはら しんいち",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "117251",
+  "bgm_name": "サルブラザー / 猿原真一"
+ },
+ "玉绳": {
+  "kana": "たまなわ",
+  "latin": "Tamanawa",
+  "latin_converted": "Tamanawa",
+  "source": "bangumi",
+  "bgm_id": "31375",
+  "bgm_name": "玉縄"
+ },
+ "琴酒": null,
+ "璃塔·伽尼斯嘉": null,
+ "田布施阳菜": {
+  "kana": "たぶせ はるな",
+  "latin": "Tabuse Haruna",
+  "latin_converted": "Tabuse Haruna",
+  "source": "bangumi-kana",
+  "bgm_id": "163721",
+  "bgm_name": "田布施陽菜"
+ },
+ "田沼尊彦": null,
+ "田沼翼": {
+  "kana": "たぬま つばさ",
+  "latin": "Tanuma Tsubasa",
+  "latin_converted": "Tanuma Tsubasa",
+  "source": "bangumi",
+  "bgm_id": "67936",
+  "bgm_name": "田沼つばさ"
+ },
+ "由比滨结衣": {
+  "kana": "ゆいがはま ゆい",
+  "latin": "Yuigahama Yui",
+  "latin_converted": "Yuigahama Yui",
+  "source": "bangumi",
+  "bgm_id": "19041",
+  "bgm_name": "由比ヶ浜結衣"
+ },
+ "由比滨结衣的母亲": null,
+ "登米": null,
+ "白石茉子": null,
+ "白银圭": {
+  "kana": "しろがね けい",
+  "latin": "Shirogane Kei",
+  "latin_converted": "Shirogane Kei",
+  "source": "bangumi",
+  "bgm_id": "67937",
+  "bgm_name": "白銀圭"
+ },
+ "白银御行": {
+  "kana": "しろがね みゆき",
+  "latin": "Shirogane Miyuki",
+  "latin_converted": "Shirogane Miyuki",
+  "source": "bangumi",
+  "bgm_id": "66900",
+  "bgm_name": "白銀御行"
+ },
+ "白银父亲": null,
+ "白马探": {
+  "kana": "はくば さぐる",
+  "latin": "Hakuba Saguru",
+  "latin_converted": "Hakuba Saguru",
+  "source": "bangumi",
+  "bgm_id": "7054",
+  "bgm_name": "白馬探"
+ },
+ "白鸟任三郎": {
+  "kana": "しらとり にんざぶろう",
+  "latin": "Shiratori Ninzaburou",
+  "latin_converted": "Shiratori Ninzaburou",
+  "source": "bangumi",
+  "bgm_id": "7062",
+  "bgm_name": "白鳥任三郎"
+ },
+ "盐田平八郎": null,
+ "目暮十三": null,
+ "目暮绿": {
+  "kana": "めぐれ みどり",
+  "latin": "Megure Midori",
+  "latin_converted": "Megure Midori",
+  "source": "bangumi-kana",
+  "bgm_id": "17787",
+  "bgm_name": "目暮みどり"
+ },
+ "相模南": {
+  "kana": "さがみ みなみ",
+  "latin": "kagami minami",
+  "latin_converted": "Sagami Minami",
+  "source": "bangumi",
+  "bgm_id": "26144",
+  "bgm_name": "相模南",
+  "latin_differs": true
+ },
+ "真柴智": {
+  "kana": "ましば さとし",
+  "latin": "Mashiba Satoshi",
+  "latin_converted": "Mashiba Satoshi",
+  "source": "bangumi",
+  "bgm_id": "43197",
+  "bgm_name": "真柴智"
+ },
+ "石上优": {
+  "kana": "いしがみ ゆう",
+  "latin": "Ishigami Yuu",
+  "latin_converted": "Ishigami Yuu",
+  "source": "bangumi-kana",
+  "bgm_id": "67409",
+  "bgm_name": "石上優"
+ },
+ "石田将也": {
+  "kana": "いしだ しょうや",
+  "latin": "Ishida Shouya",
+  "latin_converted": "Ishida Shouya",
+  "source": "bangumi",
+  "bgm_id": "40176",
+  "bgm_name": "石田将也"
+ },
+ "石田美也子": {
+  "kana": "いしだ みやこ",
+  "latin": "Ishida Miyako",
+  "latin_converted": "Ishida Miyako",
+  "source": "bangumi-kana",
+  "bgm_id": "54859",
+  "bgm_name": "石田美也子"
+ },
+ "神乐崎·迪波斯琪": null,
+ "科恩": null,
+ "稻尾一久": null,
+ "立花富美": {
+  "kana": "たちばな ふみ",
+  "latin": "Tachibana Fumi",
+  "latin_converted": "Tachibana Fumi",
+  "source": "bangumi",
+  "bgm_id": "70547",
+  "bgm_name": "立花冨美"
+ },
+ "米原樱子": {
+  "kana": "よねはら さくらこ",
+  "latin": "Yonehara Sakurako",
+  "latin_converted": "Yonehara Sakurako",
+  "source": "bangumi-kana",
+  "bgm_id": "113532",
+  "bgm_name": "米原桜子"
+ },
+ "米拉·朱利亚塔·维斯巴朗德": null,
+ "索诺亚": null,
+ "索诺伊": null,
+ "索诺妮": null,
+ "索诺娜": null,
+ "索诺希": null,
+ "索诺枸": null,
+ "索诺洛库": null,
+ "索诺萨": null,
+ "约顿娜": null,
+ "纪卡莲": {
+  "kana": "きの かれん",
+  "latin": "Kino Karen",
+  "latin_converted": "Kino Karen",
+  "source": "bangumi",
+  "bgm_id": "110864",
+  "bgm_name": "紀かれん"
+ },
+ "绫小路文麿": {
+  "kana": "あやのこうじ ふみまろ",
+  "latin": "Ayanokouji Fumimaru",
+  "latin_converted": "Ayanokouji Fumimaro",
+  "source": "bangumi",
+  "bgm_id": "8337",
+  "bgm_name": "綾小路文麿",
+  "latin_differs": true
+ },
+ "美希提": null,
+ "羽田康晴": null,
+ "羽田浩司": {
+  "kana": "はね だ こう",
+  "latin": "Hane Da Kou",
+  "latin_converted": "Hane Da Kou",
+  "source": "bangumi-kana",
+  "bgm_id": "195481",
+  "bgm_name": "羽田浩司"
+ },
+ "羽田秀吉": {
+  "kana": "はねだ しゅうきち",
+  "latin": "Haneda Shūkichi",
+  "latin_converted": "Haneda Shuukichi",
+  "source": "bangumi",
+  "bgm_id": "73755",
+  "bgm_name": "羽田秀吉",
+  "latin_differs": true
+ },
+ "羽贺响辅": null,
+ "胁田兼则": null,
+ "花泽香菜(天气之子)": {
+  "kana": "はなざわ カナ",
+  "latin": "Hanazawa Kana",
+  "latin_converted": "Hanazawa Kana",
+  "source": "bangumi",
+  "bgm_id": "72838",
+  "bgm_name": "花澤カナ"
+ },
+ "若狭留美": null,
+ "范道大也": {
+  "kana": "ブンレッド / はんどう たいや",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170742",
+  "bgm_name": "ブンレッド / 範道大也"
+ },
+ "茱蒂·斯泰琳": null,
+ "荻野彩实": null,
+ "萨布雷": null,
+ "萩原千速": null,
+ "萩原研二": null,
+ "藤原千花": {
+  "kana": "ふじわら ちか",
+  "latin": "Fujiwara Chika",
+  "latin_converted": "Fujiwara Chika",
+  "source": "bangumi",
+  "bgm_id": "67408",
+  "bgm_name": "藤原千花"
+ },
+ "藤原萌叶": {
+  "kana": "ふじわら もえは",
+  "latin": "Fujiwara Moeha",
+  "latin_converted": "Fujiwara Moeha",
+  "source": "bangumi",
+  "bgm_id": "111784",
+  "bgm_name": "藤原萌葉"
+ },
+ "虹野明": null,
+ "西宫八重子": {
+  "kana": "にしみや やえこ",
+  "latin": "Nishimiya Yaeko",
+  "latin_converted": "Nishimiya Yaeko",
+  "source": "bangumi-kana",
+  "bgm_id": "54861",
+  "bgm_name": "西宮八重子"
+ },
+ "西宫硝子": {
+  "kana": "にしみや しょうこ",
+  "latin": "nishimiya syouko",
+  "latin_converted": "Nishimiya Shouko",
+  "source": "bangumi",
+  "bgm_id": "24760",
+  "bgm_name": "西宮硝子",
+  "latin_differs": true
+ },
+ "西宫结弦": {
+  "kana": "にしみや ゆづる",
+  "latin": "Nishimiya Yuzuru",
+  "latin_converted": "Nishimiya Yuzuru",
+  "source": "bangumi",
+  "bgm_id": "40178",
+  "bgm_name": "西宮結絃"
+ },
+ "詹姆斯·布莱克": null,
+ "诸伏景光": {
+  "kana": "もろふし ひろみつ",
+  "latin": "Morofushi Hiromitsu",
+  "latin_converted": "Morofushi Hiromitsu",
+  "source": "bangumi",
+  "bgm_id": "78875",
+  "bgm_name": "諸伏景光"
+ },
+ "诸伏高明": {
+  "kana": "もろふし たかあき",
+  "latin": "Morofushi Takaaki",
+  "latin_converted": "Morofushi Takaaki",
+  "source": "bangumi",
+  "bgm_id": "10391",
+  "bgm_name": "諸伏高明"
+ },
+ "贝尔托瓦茨·贝齐": null,
+ "贝尔摩德": null,
+ "赤井务武": {
+  "kana": "あかい つとむ",
+  "latin": "Akai Tsutomu",
+  "latin_converted": "Akai Tsutomu",
+  "source": "bangumi-kana",
+  "bgm_id": "130615",
+  "bgm_name": "赤井務武"
+ },
+ "赤井秀一": {
+  "kana": "おきや すばる",
+  "latin": "Akai Shuuichi",
+  "latin_converted": "Okiya Subaru",
+  "source": "bangumi",
+  "bgm_id": "7073",
+  "bgm_name": "赤井秀一",
+  "latin_differs": true
+ },
+ "赤木量子": null,
+ "越水七槻": {
+  "kana": "こしみず なつき",
+  "latin": "Koshimizu Natsuki",
+  "latin_converted": "Koshimizu Natsuki",
+  "source": "bangumi",
+  "bgm_id": "77109",
+  "bgm_name": "越水七槻"
+ },
+ "远山和叶": {
+  "kana": "とおやま かずは",
+  "latin": "Tooyama Kazuha",
+  "latin_converted": "Tooyama Kazuha",
+  "source": "bangumi",
+  "bgm_id": "7051",
+  "bgm_name": "遠山和葉"
+ },
+ "远山樱(名侦探柯南)": null,
+ "远山银司郎": null,
+ "远野吠": {
+  "kana": "ゴジュウウルフ／とおの ほえる",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170764",
+  "bgm_name": "ゴジュウウルフ／遠野吠"
+ },
+ "铁美智子": null,
+ "铁诸羽": {
+  "kana": "くろがね ろはの",
+  "latin": "Kurogane Rohano",
+  "latin_converted": "Kurogane Rohano",
+  "source": "bangumi-kana",
+  "bgm_id": "130341",
+  "bgm_name": "鉄諸羽"
+ },
+ "铃木园子": null,
+ "铃木次郎吉": {
+  "kana": "すずき じろきち",
+  "latin": "Suzuki Jirokichi",
+  "latin_converted": "Suzuki Jirokichi",
+  "source": "bangumi",
+  "bgm_id": "7725",
+  "bgm_name": "鈴木次郎吉"
+ },
+ "铃木绫子": null,
+ "长岛茂雄": null,
+ "阳川咲也": {
+  "kana": "パトレンにごう / ひかわ さくや",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170883",
+  "bgm_name": "パトレン2号 / 陽川咲也"
+ },
+ "阳马·盖斯特": null,
+ "阿天坊梦": {
+  "kana": "あてんぼう ゆめ",
+  "latin": "Atenbou Yume",
+  "latin_converted": "Atenbou Yume",
+  "source": "bangumi",
+  "bgm_id": "111981",
+  "bgm_name": "阿天坊ゆめ"
+ },
+ "阿曼达·休斯": null,
+ "阿笠博士": {
+  "kana": "あがさ ひろし",
+  "latin": "Agasa Hiroshi",
+  "latin_converted": "Agasa Hiroshi",
+  "source": "bangumi",
+  "bgm_id": "36145",
+  "bgm_name": "阿笠博士"
+ },
+ "阿道夫·佩斯卡罗洛": null,
+ "阿部一二三": null,
+ "雉野刚": {
+  "kana": "キジブラザー / きじの つよし",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "117254",
+  "bgm_name": "キジブラザー / 雉野つよし"
+ },
+ "雨(天气之子)": null,
+ "雪之下阳乃": {
+  "kana": "ゆきのした はるの",
+  "latin": "Yukinoshita Haruno",
+  "latin_converted": "Yukinoshita Haruno",
+  "source": "bangumi",
+  "bgm_id": "20323",
+  "bgm_name": "雪ノ下陽乃"
+ },
+ "雪之下阳乃和雪乃的母亲": null,
+ "雪之下阳乃和雪乃的父亲": null,
+ "雪之下雪乃": {
+  "kana": "ゆきのした ゆきの",
+  "latin": "Yukinoshita Yukino",
+  "latin_converted": "Yukinoshita Yukino",
+  "source": "bangumi",
+  "bgm_id": "19040",
+  "bgm_name": "雪ノ下雪乃"
+ },
+ "露卡·米露菲": null,
+ "须贺圭介": {
+  "kana": "すが けいすけ",
+  "latin": "Suga Keisuke",
+  "latin_converted": "Suga Keisuke",
+  "source": "bangumi",
+  "bgm_id": "70545",
+  "bgm_name": "須賀圭介"
+ },
+ "须贺夏美": {
+  "kana": "すが なつみ",
+  "latin": "Suga Natsumi",
+  "latin_converted": "Suga Natsumi",
+  "source": "bangumi",
+  "bgm_id": "70546",
+  "bgm_name": "須賀夏美"
+ },
+ "须贺萌花": {
+  "kana": "すが",
+  "latin": "Suga",
+  "latin_converted": "Suga",
+  "source": "bangumi-kana",
+  "bgm_id": "193590",
+  "bgm_name": "須賀"
+ },
+ "风切大和": null,
+ "风见裕也": {
+  "kana": "かざみ ゆうや",
+  "latin": "Kazami Yuuya",
+  "latin_converted": "Kazami Yuuya",
+  "source": "bangumi",
+  "bgm_id": "78876",
+  "bgm_name": "風見裕也"
+ },
+ "风野": null,
+ "骷洛狄·罗伊科迪亚姆": null,
+ "高井高司": {
+  "kana": "たかい たかし",
+  "latin": "Takai Takashi",
+  "latin_converted": "Takai Takashi",
+  "source": "bangumi",
+  "bgm_id": "70550",
+  "bgm_name": "高井高司"
+ },
+ "高尾诺埃尔": {
+  "kana": "ルパンエックス / パトレンエックス / たかお ノエル",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "170886",
+  "bgm_name": "ルパンエックス / パトレンエックス / 高尾ノエル"
+ },
+ "高木涉(名侦探柯南)": null,
+ "鬼冢八藏": {
+  "kana": "おにづか はちぞう",
+  "latin": "Oniduka Hachizou",
+  "latin_converted": "Onizuka Hachizou",
+  "source": "bangumi",
+  "bgm_id": "112750",
+  "bgm_name": "鬼塚八蔵",
+  "latin_differs": true
+ },
+ "鬼头遥": {
+  "kana": "オニシスター / きとう はるか",
+  "latin": null,
+  "latin_converted": null,
+  "source": "bangumi-kana",
+  "bgm_id": "117252",
+  "bgm_name": "オニシスター / 鬼頭はるか"
+ },
+ "鲛崎岛治": null,
+ "鹤见留美": {
+  "kana": "つるみ るみ",
+  "latin": "Tsurumi Rumi",
+  "latin_converted": "Tsurumi Rumi",
+  "source": "bangumi-kana",
+  "bgm_id": "26145",
+  "bgm_name": "鶴見留美"
+ },
+ "黑影君": null,
+ "黑暗皇帝杰特": {
+  "kana": "ゼット",
+  "latin": "Zetto",
+  "latin_converted": "Zetto",
+  "source": "bangumi-kana",
+  "bgm_id": "57658",
+  "bgm_name": "Z",
+  "id_fallback": true
+ },
+ "黑田兵卫": null,
+ "黑羽快斗": {
+  "kana": "くろば かいと",
+  "latin": "Kuroba Kaito",
+  "latin_converted": "Kuroba Kaito",
+  "source": "bangumi",
+  "bgm_id": "181870",
+  "bgm_name": "黒羽快斗"
+ },
+ "黑羽盗一": {
+  "kana": "くろば とういち",
+  "latin": "Kuroba Toichi",
+  "latin_converted": "Kuroba Touichi",
+  "source": "bangumi",
+  "bgm_id": "8382",
+  "bgm_name": "黒羽盗一",
+  "latin_differs": true
+ },
+ "龙珠桃": {
+  "kana": "りゅうじゅ もも",
+  "latin": "Ryuuju Momo",
+  "latin_converted": "Ryuuju Momo",
+  "source": "bangumi",
+  "bgm_id": "110865",
+  "bgm_name": "龍珠桃"
+ }
+}

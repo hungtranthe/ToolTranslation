@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Studio Dịch tiểu thuyết Trung → Việt | H. Quản lý xưng hô</title>
+<style>
+  /* CSS Thuần hoàn toàn - Độc lập 100% Offline (Không CDN, Không Web Font ngoài) */
+  :root {
+    --bg-main: #0c0d10;
+    --bg-sidebar: #111317;
+    --bg-card: #16181d;
+    --bg-surface: #1d2027;
+    --bg-input: #13151a;
+    --border-color: #272a33;
+    --border-light: #363b47;
+    --text-main: #e2e4e9;
+    --text-muted: #848a97;
+    --text-bright: #ffffff;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent-emerald: #059669;
+    --accent-emerald-hover: #047857;
+    --accent-amber: #d97706;
+    --font-stack: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    font-size: 13px;
+    line-height: 1.45;
+    overflow: hidden;
+  }
+
+  /* Cho phép copy bôi đen văn bản tự do khắp nơi */
+  body, main, section, aside, div, table, p, span, td, th {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+
+  /* Chỉ giới hạn user-select: none trên các nút bấm và nhãn tương tác */
+  button, .btn, .nav-item, select, th {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2e39;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3d4352;
+  }
+
+  /* Layout chính */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* 1. Header */
+  .header {
+    height: 48px;
+    background-color: var(--bg-sidebar);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    flex-shrink: 0;
+    z-index: 30;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-logo {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #2563eb, #4338ca);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .brand-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .divider-v {
+    height: 16px;
+    width: 1px;
+    background: var(--border-color);
+    margin: 0 4px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .btn:hover {
+    background-color: var(--border-color);
+    color: #fff;
+  }
+  .btn-primary {
+    background-color: var(--primary);
+    border-color: #3b82f6;
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: #2563eb;
+  }
+  .btn-emerald {
+    background-color: var(--accent-emerald);
+    border-color: #10b981;
+    color: #fff;
+  }
+  .btn-emerald:hover {
+    background-color: var(--accent-emerald-hover);
+  }
+  .btn-sm {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+  .btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  /* Storage Alert Banner */
+  #storage-alert-banner {
+    display: none;
+    background-color: #7f1d1d;
+    border-bottom: 2px solid #ef4444;
+    color: #fee2e2;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+  }
+  #storage-alert-banner.active {
+    display: flex;
+  }
+  .banner-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  /* Layout giữa: Sidebar + Main Area */
+  .layout-body {
+    display: flex;
+    flex-content: space-between;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* 2. Left Sidebar */
+  .sidebar {
+    width: 230px;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  .sidebar-header {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .badge-mono {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+  }
+
+  .sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.15s;
+    border: 1px solid transparent;
+  }
+  .nav-item.disabled {
+    opacity: 0.38;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  .nav-item:not(.disabled):hover {
+    color: var(--text-main);
+    background-color: rgba(255,255,255,0.03);
+  }
+  .nav-item.active {
+    background-color: rgba(37,99,235,0.15);
+    color: #60a5fa;
+    border-color: rgba(59,130,246,0.3);
+    font-weight: 600;
+  }
+  .nav-item .icon {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .nav-item.active .icon {
+    opacity: 1;
+  }
+
+  /* 3. Vùng làm việc chính */
+  .workspace {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-main);
+    overflow: hidden;
+  }
+
+  /* Sub Toolbar */
+  .toolbar {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .toolbar-left, .toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .module-tag {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .module-heading {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .module-sub {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+
+  .stat-pill-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  .stat-badge {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 11px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-left: 4px;
+  }
+  .stat-badge.empty {
+    background: rgba(148, 163, 184, 0.15);
+    color: #cbd5e1;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+  }
+  .stat-badge.default {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fcd34d;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+  }
+  .stat-badge.locked {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+  }
+
+  /* Khung quy tắc */
+  .rules-panel {
+    display: none;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 16px;
+    flex-shrink: 0;
+  }
+  .rules-panel.open {
+    display: block;
+  }
+  .rules-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .rules-textarea {
+    width: 100%;
+    height: 110px;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: #6ee7b7;
+    resize: vertical;
+    outline: none;
+  }
+  .rules-textarea:focus {
+    border-color: #3b82f6;
+  }
+
+  /* Grid 3 cột chuẩn */
+  .grid-workspace {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 240px 1fr 310px;
+    overflow: hidden;
+  }
+
+  /* Cột 1: Danh sách nhân vật */
+  .col-characters {
+    background-color: var(--bg-card);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .panel-header {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .panel-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .panel-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+  }
+  .search-wrapper {
+    position: relative;
+  }
+  .search-input {
+    width: 100%;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 5px 8px 5px 24px;
+    font-size: 12px;
+    color: #fff;
+    outline: none;
+  }
+  .search-input:focus {
+    border-color: #3b82f6;
+  }
+  .search-icon {
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    color: var(--text-muted);
+    font-size: 11px;
+    pointer-events: none;
+  }
+  .char-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .char-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.15s;
+    user-select: none;
+  }
+  .char-item:hover {
+    background-color: var(--bg-surface);
+  }
+  .char-item.active {
+    background-color: rgba(37,99,235,0.18);
+    border-color: rgba(59,130,246,0.35);
+    color: #93c5fd;
+  }
+  .char-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--bg-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #cbd5e1;
+    flex-shrink: 0;
+    text-transform: uppercase;
+  }
+  .char-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+    margin-left: 8px;
+  }
+  .char-name {
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .char-meta {
+    font-size: 10px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .gender-badge {
+    padding: 0 4px;
+    border-radius: 2px;
+    border: 1px solid;
+    font-size: 9px;
+  }
+  .gender-male {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.25);
+  }
+  .gender-female {
+    color: #f472b6;
+    background: rgba(244, 114, 182, 0.1);
+    border-color: rgba(244, 114, 182, 0.25);
+  }
+  .gender-other {
+    color: #94a3b8;
+    background: rgba(148, 163, 184, 0.1);
+    border-color: rgba(148, 163, 184, 0.25);
+  }
+
+  /* Cột 2: Bảng quan hệ & Phân trang */
+  .col-table-container {
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .table-toolbar {
+    padding: 8px 12px;
+    background-color: rgba(22, 24, 29, 0.9);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    gap: 8px;
+  }
+  .table-toolbar-left, .table-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .filter-select {
+    background-color: var(--bg-input);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    outline: none;
+  }
+  .filter-select:focus {
+    border-color: #3b82f6;
+  }
+
+  /* Pagination Bar */
+  .pagination-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .pagination-info {
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    font-size: 11px;
+    padding: 0 4px;
+  }
+
+  .table-scroll-area {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+  }
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 12px;
+  }
+  .data-table th {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-card);
+    color: #9aa1b0;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 2;
+    white-space: nowrap;
+  }
+  .data-table td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #1e222a;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .data-table tr:hover td {
+    background-color: rgba(255, 255, 255, 0.025);
+  }
+  .data-table tr.selected td {
+    background-color: #17243c;
+  }
+
+  .table-input {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 6px;
+    font-size: 12px;
+    width: 84px;
+    outline: none;
+  }
+  .table-input:focus {
+    border-color: #3b82f6;
+    background-color: #161a22;
+  }
+
+  .tag-status {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10.5px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  .tag-status.empty {
+    color: #94a3b8;
+    background-color: rgba(148, 163, 184, 0.12);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+  }
+  .tag-status.default {
+    color: #fbbf24;
+    background-color: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+  .tag-status.locked {
+    color: #34d399;
+    background-color: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+
+  /* Table Footer Pagination */
+  .table-footer {
+    padding: 6px 12px;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    font-size: 11.5px;
+    color: var(--text-muted);
+  }
+
+  /* Cột 3: Bằng chứng ngữ cảnh */
+  .col-evidence {
+    background-color: var(--bg-card);
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .evidence-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+  }
+  .evidence-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+  .evidence-quote-item {
+    background-color: var(--bg-input);
+    border-left: 3px solid #3b82f6;
+    border-radius: 0 4px 4px 0;
+    padding: 8px 10px;
+    font-size: 12px;
+    margin-bottom: 8px;
+    user-select: text;
+    -webkit-user-select: text;
+  }
+  .evidence-quote-header {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #60a5fa;
+    font-family: var(--font-mono);
+    margin-bottom: 4px;
+  }
+  .evidence-quote-body {
+    color: #d1d5db;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* 4. Footer Status Bar */
+  .app-footer {
+    height: 24px;
+    background-color: var(--bg-sidebar);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    flex-shrink: 0;
+  }
+  .footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .status-indicator {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .status-ok {
+    color: #10b981;
+  }
+  .status-ok .status-indicator {
+    background-color: #10b981;
+  }
+  .status-err {
+    color: #ef4444;
+    font-weight: 700;
+  }
+  .status-err .status-indicator {
+    background-color: #ef4444;
+  }
+
+  /* Helper */
+  .hidden { display: none !important; }
+  .text-center { text-align: center; }
+</style>
+</head>
+<body>
+<div class="app-container">
+<!-- BANNER CẢNH BÁO LƯU TRỮ -->
+<div id="storage-alert-banner">
+<div style="display: flex; align-items: center; gap: 8px;">
+<span style="font-size: 15px;">⚠️</span>
+<span>Cảnh báo lưu trữ: Bộ nhớ cục bộ bị đầy hoặc không ghi được! Hãy bấm Xuất (2 file) ngay để tải bản sao lưu về máy tính.</span>
+</div>
+<div class="banner-actions">
+<button class="btn btn-sm btn-emerald" id="btn-banner-export" type="button">💾 Tải sao lưu ngay</button>
+<button class="btn btn-sm" id="btn-close-banner" style="background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.2);" type="button">✕ Đóng</button>
+</div>
+</div>
+<!-- 1. TOP HEADER (ĐÃ DỌN DẸP THEO YÊU CẦU 4) -->
+<header class="header">
+<div class="header-left">
+<div class="brand-logo">H</div>
+<div class="brand-title">
+<span>Studio Dịch tiểu thuyết Trung → Việt</span>
+</div>
+</div>
+</header>
+<!-- 2. MAIN LAYOUT: SIDEBAR + KHÔNG GIAN LÀM VIỆC -->
+<div class="layout-body">
+<!-- Left Sidebar: Modules A -> H (A-G làm mờ theo Yêu cầu 6) -->
+<aside class="sidebar">
+<div class="sidebar-header">
+<span class="sidebar-title">Phân hệ xử lý</span>
+<span class="badge-mono">8 modules</span>
+</div>
+<nav class="sidebar-nav">
+<a class="nav-item disabled" href="#" title="Chưa có trong bản độc lập">
+<span class="icon">⊞</span>
+<span>A. Tổng quan &amp; Cấu hình</span>
+</a>
+<a class="nav-item disabled" href="#" title="Chưa có trong bản độc lập">
+<span class="icon">📊</span>
+<span>B. Báo cáo tác phẩm</span>
+</a>
+<a class="nav-item disabled" href="#" title="Chưa có trong bản độc lập">
+<span class="icon">👤</span>
+<span>C. Nhân vật mốc</span>
+</a>
+<a class="nav-item disabled" href="#" title="Chưa có trong bản độc lập">
+<span class="icon">💡</span>
+<span>D. Gợi ý Moegirl</span>
+</a>
+<a class="nav-item disabled" href="#" title="Chưa có trong bản độc lập">
+<span class="icon">📖</span>
+<span>E. Quản lý Glossary</span>
+</a>
+<a class="nav-item disabled" href="#" title="Chưa có trong bản độc lập">
+<span class="icon">🌐</span>
+<span>F. Dịch &amp; Tiến trình</span>
+</a>
+<a class="nav-item disabled" href="#" title="Chưa có trong bản độc lập">
+<span class="icon">✓</span>
+<span>G. Nhật ký &amp; Kiểm tra</span>
+</a>
+<!-- Duy nhất Module H hoạt động bình thường, sắc nét -->
+<a class="nav-item active" href="#">
+<span class="icon">👥</span>
+<span>H. Quản lý xưng hô</span>
+</a>
+</nav>
+</aside>
+<!-- Workspace: Module H -->
+<div class="workspace">
+<!-- Sub-Toolbar -->
+<div class="toolbar">
+<div class="toolbar-left">
+<div>
+<div class="module-tag">Module H</div>
+<div class="module-heading">
+<span>Quản lý xưng hô</span>
+<span class="module-sub">(xungho_ui.html)</span>
+</div>
+</div>
+<div class="divider-v"></div>
+<!-- Action Buttons -->
+<label class="btn" for="file-input" title="Mở file JSON dữ liệu">
+<span>📂</span> Mở file (.json)
+          </label>
+<input accept=".json" id="file-input" style="display: none;" type="file"/>
+<button class="btn btn-primary" disabled id="btn-run-entities" title="Phân tích lại báo cáo AI Reader để cập nhật nhân vật và quan hệ" type="button">Chạy entities</button>
+<button class="btn" id="btn-toggle-rules" type="button">
+<span>⚙</span> Tổng hợp quan hệ &amp; quy tắc
+          </button>
+<button class="btn btn-emerald" id="btn-export" type="button">
+<span>💾</span> Xuất (2 file)
+          </button>
+<button class="btn" id="btn-sample-data" type="button">
+<span>🎲</span> Dữ liệu mẫu
+          </button>
+</div>
+<div class="toolbar-right">
+<!-- Badges thống kê -->
+<div class="stat-pill-group">
+<span style="color: var(--text-muted);">Trống: <span class="stat-badge empty" id="stat-empty">0</span></span>
+<span style="color: var(--border-color);">|</span>
+<span style="color: var(--text-muted);">Mặc định: <span class="stat-badge default" id="stat-default">0</span></span>
+<span style="color: var(--border-color);">|</span>
+<span style="color: var(--text-muted);">Đã chốt: <span class="stat-badge locked" id="stat-locked">0</span></span>
+</div>
+</div>
+</div>
+<!-- Khung Quy tắc (Toggle Modal/Drawer) -->
+<div class="rules-panel" id="rules-panel" style="max-height:45vh;overflow:auto">
+<div class="rules-panel-header">
+<div><strong>Quan hệ × giới tính người nói → người nghe</strong>
+<div style="color:var(--text-muted)">Báo cáo là bằng chứng, không xác định vai trên/dưới. Chỉ áp gợi ý cho các dòng đã duyệt trong bảng; dòng đã chốt không bị thay đổi.</div></div>
+</div>
+<div id="rules-summary"></div>
+<div hidden><button id="btn-reset-rules" type="button"></button><button id="btn-save-rules" type="button"></button><button id="btn-apply-rules" type="button"></button><textarea id="rules-editor"></textarea></div>
+</div>
+<!-- Không gian lưới 3 cột: Nhân vật | Bảng xưng hô + Phân trang | Bằng chứng -->
+<main class="grid-workspace">
+<!-- CỘT 1: NHÂN VẬT -->
+<aside class="col-characters">
+<div class="panel-header">
+<div class="panel-title-row">
+<span class="panel-title">Danh sách nhân vật</span>
+<span style="color: var(--text-muted); font-size: 13px;">👥</span>
+</div>
+<div class="search-wrapper">
+<span class="search-icon">🔍</span>
+<input autocomplete="off" class="search-input" id="input-search-char" placeholder="Tìm kiếm nhân vật..." type="text"/>
+</div>
+</div>
+<!-- Container áp dụng Event Delegation -->
+<div class="char-list" id="char-list-container">
+<!-- Render động bằng JS -->
+</div>
+</aside>
+<!-- CỘT 2: BẢNG DÒNG QUAN HỆ & XƯNG HÔ -->
+<section class="col-table-container">
+<!-- Toolbar bảng: Lọc trạng thái & Phân trang Header -->
+<div class="table-toolbar">
+<div class="table-toolbar-left">
+<label for="filter-status" style="font-size: 12px; color: var(--text-muted);">Lọc trạng thái:</label>
+<select class="filter-select" id="filter-status">
+<option value="all">Tất cả trạng thái</option>
+<option value="empty">Trống (chưa điền)</option>
+<option value="default">Mặc định (theo quy tắc)</option>
+<option value="locked">Đã chốt (thủ công)</option>
+</select>
+</div>
+<!-- Cụm phân trang Header -->
+<div class="table-toolbar-right">
+<div class="pagination-group">
+<button class="btn btn-sm" data-action="prev-page" id="btn-prev-page-top">◀ Trước</button>
+<span class="pagination-info" id="pagination-info-top">Trang 1 / 1</span>
+<button class="btn btn-sm" data-action="next-page" id="btn-next-page-top">Sau ▶</button>
+</div>
+</div>
+</div>
+<!-- Bảng cuộn -->
+<div class="table-scroll-area">
+<table class="data-table">
+<thead>
+<tr>
+<th>Người nói</th>
+<th>Người nghe</th>
+<th>Phạm vi chương</th>
+<th>Nhóm quan hệ</th>
+<th>Tự xưng</th>
+<th>Đại từ gọi</th>
+<th>Gọi tên</th>
+<th>Trạng thái</th>
+<th style="text-align: center;">Chốt</th>
+</tr>
+</thead>
+<!-- Body xử lý bằng Event Delegation -->
+<tbody id="table-body">
+<tr><td class="text-center" colspan="9" style="color: var(--text-muted); padding: 50px 0;">Không có dữ liệu phù hợp với bộ lọc hiện tại.</td></tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Bảng: Thông số & Điều hướng Phân trang Footer -->
+<div class="table-footer">
+<div id="row-count-display">Hiển thị: 0 / 0 dòng (Tối đa 200 dòng/trang)</div>
+<div class="pagination-group">
+<button class="btn btn-sm" data-action="prev-page" id="btn-prev-page-bottom">◀ Trước</button>
+<span class="pagination-info" id="pagination-info-bottom">Trang 1 / 1</span>
+<button class="btn btn-sm" data-action="next-page" id="btn-next-page-bottom">Sau ▶</button>
+</div>
+</div>
+</section>
+<!-- CỘT 3: BẰNG CHỨNG NGỮ CẢNH -->
+<aside class="col-evidence">
+<div class="panel-header" style="border-bottom: 1px solid var(--border-color); padding: 10px 12px;">
+<div class="panel-title-row">
+<span class="panel-title">Bằng chứng quan hệ</span>
+<span style="color: var(--text-muted); font-size: 13px;">👁</span>
+</div>
+</div>
+<div class="evidence-content" id="evidence-container">
+<div style="text-align: center; color: var(--text-muted); font-size: 12px; margin-top: 60px; padding: 0 16px;">
+              Chọn một dòng trong bảng danh sách để kiểm tra ngữ cảnh câu thoại và bằng chứng trích dẫn.
+            </div>
+</div>
+</aside>
+</main>
+</div>
+</div>
+<!-- 3. FOOTER STATUS BAR (ĐÃ DỌN DẸP THEO YÊU CẦU 4 VÀ TRẠNG THÁI THỰC TẾ THEO YÊU CẦU 5) -->
+<footer class="app-footer">
+<div class="footer-left">
+<span id="footer-storage-info">Kho quyết định: 0 mục</span>
+</div>
+<div class="footer-right">
+<span class="status-ok" id="footer-save-status"><span class="status-indicator"></span>Đã lưu</span>
+</div>
+</footer>
+</div>
+<!-- LOGIC JAVASCRIPT THUẦN -->
+<script>
+const STORAGE_KEY_DECISIONS = 'xungho_decisions_store';
+const STORAGE_KEY_DATASET   = 'xungho_dataset';
+const STORAGE_KEY_RULES     = 'xungho_rules_config_v2';
+
+const PAGE_SIZE = 200;
+
+// Trạng thái lưu trữ thực tế
+let lastStorageStatusOk = true;
+
+const DEFAULT_RULES = [
+  {
+    group: "Bạn bè",
+    role: "*",
+    speaker_gender: "male",
+    listener_gender: "*",
+    self: "tôi",
+    you: "cậu",
+    name: ""
+  },
+  {
+    group: "Bạn bè",
+    role: "*",
+    speaker_gender: "female",
+    listener_gender: "*",
+    self: "tớ",
+    you: "cậu",
+    name: ""
+  },
+  {
+    group: "Cha mẹ-con",
+    role: "junior",
+    speaker_gender: "*",
+    listener_gender: "*",
+    self: "con",
+    you: "",
+    name: ""
+  }
+];
+
+const SAMPLE_DATA = {
+  characters: [
+    { id: "hachiman", name: "Hikigaya Hachiman", gender: "male" },
+    { id: "yukino", name: "Yukinoshita Yukino", gender: "female" },
+    { id: "yui", name: "Yuigahama Yui", gender: "female" },
+    { id: "komachi", name: "Hikigaya Komachi", gender: "female" },
+    { id: "shizuka", name: "Hiratsuka Shizuka", gender: "female" },
+    { id: "hachiman_dad", name: "Bố Hachiman", gender: "male" }
+  ],
+  rows: [
+    {
+      speaker: "hachiman",
+      listener: "yukino",
+      from: 1,
+      to: 25,
+      group: "Bạn bè",
+      role: null,
+      evidence: [
+        { ch: 1, text: "Cậu không nghĩ thế giới này có vấn đề sao?" },
+        { ch: 4, text: "Tôi chỉ đang nói sự thật thôi." }
+      ]
+    },
+    {
+      speaker: "hachiman",
+      listener: "yui",
+      from: 2,
+      to: 25,
+      group: "Bạn bè",
+      role: null,
+      evidence: [
+        { ch: 2, text: "Cậu không cần phải gượng ép bản thân như thế." }
+      ]
+    },
+    {
+      speaker: "yukino",
+      listener: "hachiman",
+      from: 1,
+      to: 25,
+      group: "Bạn bè",
+      role: null,
+      evidence: [
+        { ch: 1, text: "Cách suy nghĩ của cậu thật kỳ quặc đấy, Hikigaya-kun." }
+      ]
+    },
+    {
+      speaker: "yui",
+      listener: "hachiman",
+      from: 2,
+      to: 25,
+      group: "Bạn bè",
+      role: null,
+      evidence: [
+        { ch: 3, text: "Hikki, ngày mai cậu có rảnh không?" }
+      ]
+    },
+    {
+      speaker: "komachi",
+      listener: "hachiman",
+      from: 1,
+      to: null,
+      group: "Gia đình",
+      role: "junior",
+      evidence: [
+        { ch: 1, text: "Anh hai, dậy ăn sáng đi nào!" }
+      ]
+    },
+    {
+      speaker: "hachiman",
+      listener: "komachi",
+      from: 1,
+      to: null,
+      group: "Gia đình",
+      role: "senior",
+      evidence: [
+        { ch: 1, text: "Anh biết rồi, để anh ngủ thêm 5 phút." }
+      ]
+    },
+    {
+      speaker: "hachiman",
+      listener: "shizuka",
+      from: 1,
+      to: null,
+      group: "Thầy trò",
+      role: "junior",
+      evidence: [
+        { ch: 1, text: "Em nghĩ bài văn của em hoàn toàn hợp lý mà cô." }
+      ]
+    },
+    {
+      speaker: "shizuka",
+      listener: "hachiman",
+      from: 1,
+      to: null,
+      group: "Thầy trò",
+      role: "senior",
+      evidence: [
+        { ch: 1, text: "Em mau vào Câu lạc bộ Tình Nguyện cho tôi!" }
+      ]
+    },
+    {
+      speaker: "hachiman",
+      listener: "hachiman_dad",
+      from: 5,
+      to: 10,
+      group: "Cha mẹ-con",
+      role: "junior",
+      evidence: [
+        { ch: 5, text: "Bố cho con xin tiền mua sách tháng này nhé." }
+      ]
+    }
+  ]
+};
+
+// Trạng thái ứng dụng
+const state = {
+  characters: [],
+  rows: [],
+  rules: [],
+  selectedSpeaker: null,
+  selectedRowKey: null,
+  filterStatus: 'all',
+  searchCharQuery: '',
+  currentPage: 1
+};
+
+function getRowKey(row) {
+  return `${row.speaker}|${row.listener}|${row.from ?? ''}`;
+}
+
+function escapeHtml(str) {
+  if (str === null || str === undefined) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/* Hiển thị / ẩn cảnh báo lưu trữ */
+function showStorageAlert() {
+  const banner = document.getElementById('storage-alert-banner');
+  if (banner) banner.classList.add('active');
+}
+function hideStorageAlert() {
+  const banner = document.getElementById('storage-alert-banner');
+  if (banner) banner.classList.remove('active');
+}
+
+/* Cập nhật nhãn trạng thái lưu trữ thực tế ở footer (Yêu cầu 5) */
+function updateSaveStatusDisplay(ok) {
+  lastStorageStatusOk = ok;
+  const statusEl = document.getElementById('footer-save-status');
+  if (!statusEl) return;
+  if (ok) {
+    statusEl.className = 'status-ok';
+    statusEl.innerHTML = '<span class="status-indicator"></span>Đã lưu';
+  } else {
+    statusEl.className = 'status-err';
+    statusEl.innerHTML = '<span class="status-indicator"></span>LỖI LƯU – hãy Xuất';
+  }
+}
+
+/* Thao tác an toàn với LocalStorage có bọc try-catch */
+function safeSetStorage(key, value) {
+  try {
+    localStorage.setItem(key, value);
+    updateSaveStatusDisplay(true);
+    return true;
+  } catch (err) {
+    console.error(`Lỗi khi lưu trữ key "${key}":`, err);
+    updateSaveStatusDisplay(false);
+    showStorageAlert();
+    return false;
+  }
+}
+
+function loadRules() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY_RULES);
+    if (saved) {
+      state.rules = JSON.parse(saved);
+      return;
+    }
+  } catch (e) {
+    console.error('Không thể đọc rules từ storage:', e);
+  }
+  state.rules = JSON.parse(JSON.stringify(DEFAULT_RULES));
+}
+
+function saveRulesToStorage() {
+  safeSetStorage(STORAGE_KEY_RULES, JSON.stringify(state.rules, null, 2));
+}
+
+function loadDecisionStore() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_DECISIONS);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    console.error('Lỗi đọc store:', e);
+    return {};
+  }
+}
+
+/**
+ * YÊU CẦU 1:
+ * với mỗi dòng, nếu status === 'empty' và cả 3 ô (self, you, name) đều rỗng ('') 
+ * thì xóa khóa đó khỏi kho (delete store[key]); ngược lại ghi {self, you, name, status}.
+ */
+function saveDecisionsToStorage() {
+  const store = loadDecisionStore();
+  state.rows.forEach(r => {
+    const key = getRowKey(r);
+    const selfVal = (r.self || '').trim();
+    const youVal = (r.you || '').trim();
+    const nameVal = (r.name || '').trim();
+    const statusVal = r.status || 'empty';
+
+    if (statusVal === 'empty' && selfVal === '' && youVal === '' && nameVal === '') {
+      if (store.hasOwnProperty(key)) {
+        delete store[key];
+      }
+    } else {
+      store[key] = {
+        self: selfVal,
+        you: youVal,
+        name: nameVal,
+        status: statusVal
+      };
+    }
+  });
+  safeSetStorage(STORAGE_KEY_DECISIONS, JSON.stringify(store));
+  updateFooterInfo();
+}
+
+/**
+ * Chỉ ghi kho dữ liệu gốc (xungho_dataset) khi nạp file mới hoặc nạp dữ liệu mẫu
+ */
+function saveDatasetToStorage(characters, rows) {
+  const dataset = {
+    characters: characters.map(c => ({ id: c.id, name: c.name, gender: c.gender })),
+    rows: rows.map(r => ({
+      speaker: r.speaker,
+      listener: r.listener,
+      from: r.from,
+      to: r.to,
+      group: r.group,
+      role: r.role,
+      evidence: r.evidence
+    }))
+  };
+  safeSetStorage(STORAGE_KEY_DATASET, JSON.stringify(dataset));
+}
+
+function mergeDecisionsIntoRows(rows, store) {
+  return rows.map(r => {
+    let standardizedRole = r.role;
+    if (standardizedRole === 'peer' || standardizedRole === '' || standardizedRole === undefined) {
+      standardizedRole = null;
+    }
+
+    const key = `${r.speaker}|${r.listener}|${r.from ?? ''}`;
+    const saved = store[key];
+
+    let self = r.self || '';
+    let you = r.you || '';
+    let name = r.name || '';
+    let status = r.status || 'empty';
+
+    if (status === 'trống') status = 'empty';
+    else if (status === 'mặc định') status = 'default';
+    else if (status === 'đã chốt') status = 'locked';
+
+    if (saved) {
+      if (saved.self !== undefined) self = saved.self;
+      if (saved.you !== undefined) you = saved.you;
+      if (saved.name !== undefined) name = saved.name;
+      if (saved.status) status = saved.status;
+    }
+
+    if (!self && !you && !name && status === 'locked') {
+      status = 'empty';
+    }
+
+    return {
+      ...r,
+      role: standardizedRole,
+      self,
+      you,
+      name,
+      status: (status === 'default' || status === 'locked') ? status : 'empty'
+    };
+  });
+}
+
+/**
+ * YÊU CẦU 2 & 3:
+ * - Kiểm tra trùng lặp khóa speaker|listener|from trong file nạp vào, cảnh báo tối đa 5 khóa đầu tiên trùng lặp.
+ * - Với mỗi dòng có status === 'locked' (hoặc có ít nhất 1 giá trị ở self/you/name mà không có trường status): GHI ĐÈ kho decisions.
+ * - Dòng có status 'default' hoặc 'empty' trong file thì KHÔNG ghi đè khi kho đang là 'locked'.
+ * - Thông báo: "Đã nạp N dòng đã chốt từ file (M dòng ghi đè kho)" với N và M tính chính xác.
+ */
+function loadFromData(jsonData, isSample = false) {
+  if (!jsonData || !Array.isArray(jsonData.characters) || !Array.isArray(jsonData.rows)) {
+    alert('File không đúng cấu trúc (cần có mảng characters và rows).');
+    return false;
+  }
+
+  // Yêu cầu 3: Kiểm tra trùng lặp khóa speaker|listener|from trong file
+  const seenKeys = new Set();
+  const duplicateKeysSet = new Set();
+  jsonData.rows.forEach(r => {
+    const key = `${r.speaker}|${r.listener}|${r.from ?? ''}`;
+    if (seenKeys.has(key)) {
+      duplicateKeysSet.add(key);
+    } else {
+      seenKeys.add(key);
+    }
+  });
+
+  if (duplicateKeysSet.size > 0) {
+    const firstFiveDuplicates = Array.from(duplicateKeysSet).slice(0, 5);
+    alert(`Cảnh báo: Phát hiện các dòng bị trùng lặp khóa (speaker|listener|from) trong file!\nDanh sách khóa trùng lặp (${firstFiveDuplicates.length}/${duplicateKeysSet.size}):\n- ${firstFiveDuplicates.join('\n- ')}`);
+  }
+
+  const cleanCharacters = jsonData.characters.map(c => ({
+    id: String(c.id),
+    name: c.name ? String(c.name) : String(c.id),
+    gender: c.gender || 'other'
+  }));
+
+  // Ghi vào kho dataset gốc
+  saveDatasetToStorage(cleanCharacters, jsonData.rows);
+
+  const store = loadDecisionStore();
+
+  let nLockedFromFile = 0;
+  let mOverwritten = 0;
+
+  jsonData.rows.forEach(r => {
+    const key = `${r.speaker}|${r.listener}|${r.from ?? ''}`;
+    const rawStatus = (r.status || '').toLowerCase();
+    const hasValues = Boolean((r.self && r.self.trim()) || (r.you && r.you.trim()) || (r.name && r.name.trim()));
+    const isLockedExplicit = (rawStatus === 'locked' || rawStatus === 'đã chốt');
+    const isLockedImplicit = (!r.hasOwnProperty('status') || r.status === undefined || r.status === null || r.status === '') && hasValues;
+
+    const isRowLocked = isLockedExplicit || isLockedImplicit;
+
+    if (isRowLocked) {
+      nLockedFromFile++;
+      if (store.hasOwnProperty(key)) {
+        mOverwritten++;
+      }
+      store[key] = {
+        self: r.self || '',
+        you: r.you || '',
+        name: r.name || '',
+        status: 'locked'
+      };
+    } else {
+      // Dòng default hoặc empty trong file
+      let normStatus = 'empty';
+      if (rawStatus === 'default' || rawStatus === 'mặc định') normStatus = 'default';
+      
+      const existingInStore = store[key];
+      // KHÔNG ghi đè khi kho đang là 'locked'
+      if (!existingInStore || existingInStore.status !== 'locked') {
+        if (normStatus === 'default' || hasValues) {
+          store[key] = {
+            self: r.self || '',
+            you: r.you || '',
+            name: r.name || '',
+            status: normStatus
+          };
+        }
+      }
+    }
+  });
+
+  safeSetStorage(STORAGE_KEY_DECISIONS, JSON.stringify(store));
+
+  state.characters = cleanCharacters;
+  state.rows = mergeDecisionsIntoRows(jsonData.rows, store);
+  state.selectedSpeaker = null;
+  state.currentPage = 1;
+  state.selectedRowKey = state.rows.length > 0 ? getRowKey(state.rows[0]) : null;
+
+  saveDecisionsToStorage();
+  render();
+
+  alert(`Đã nạp ${nLockedFromFile} dòng đã chốt từ file (${mOverwritten} dòng ghi đè kho)`);
+  return true;
+}
+
+function matchRule(row) {
+  const speaker = state.characters.find(c => c.id === row.speaker);
+  const listener = state.characters.find(c => c.id === row.listener);
+  const sGender = speaker ? speaker.gender : '*';
+  const lGender = listener ? listener.gender : '*';
+
+  for (const rule of state.rules) {
+    if (rule.group && rule.group !== '*' && rule.group !== row.group) continue;
+    if (rule.role && rule.role !== '*' && rule.role !== row.role) continue;
+    if (rule.speaker_gender && rule.speaker_gender !== '*' && rule.speaker_gender !== sGender) continue;
+    if (rule.listener_gender && rule.listener_gender !== '*' && rule.listener_gender !== lGender) continue;
+    return rule;
+  }
+  return null;
+}
+
+function applyRules() {
+  let changedCount = 0;
+
+  state.rows.forEach(row => {
+    if (row.status === 'locked') return;
+
+    const matched = matchRule(row);
+
+    if (matched) {
+      const newSelf = matched.self || '';
+      const newYou = matched.you || '';
+      const newName = matched.name || '';
+
+      const hasChange = (row.self !== newSelf) || (row.you !== newYou) || (row.name !== newName) || (row.status !== 'default');
+      if (hasChange) {
+        row.self = newSelf;
+        row.you = newYou;
+        row.name = newName;
+        row.status = (newSelf || newYou || newName) ? 'default' : 'empty';
+        changedCount++;
+      }
+    } else {
+      if (row.status === 'default') {
+        row.self = '';
+        row.you = '';
+        row.name = '';
+        row.status = 'empty';
+        changedCount++;
+      }
+    }
+  });
+
+  saveDecisionsToStorage();
+  render();
+  alert(`Đã áp dụng quy tắc thành công! Có ${changedCount} dòng được cập nhật.`);
+}
+
+function handleCellEdit(key, field, value) {
+  const row = state.rows.find(r => getRowKey(r) === key);
+  if (!row) return;
+
+  row[field] = value.trim();
+
+  if (!row.self && !row.you && !row.name) {
+    row.status = 'empty';
+  } else {
+    row.status = 'locked';
+  }
+
+  saveDecisionsToStorage();
+  updateStats();
+  updateRowDOM(key);
+}
+
+function lockRow(key) {
+  const row = state.rows.find(r => getRowKey(r) === key);
+  if (!row) return;
+
+  if (row.self || row.you || row.name) {
+    row.status = 'locked';
+  } else {
+    row.status = 'empty';
+  }
+
+  saveDecisionsToStorage();
+  updateStats();
+  updateRowDOM(key);
+}
+
+/* Yêu cầu: Xuất file 1 trước, setTimeout 300ms rồi xuất file 2 để chống chặn download */
+function exportFiles() {
+  const charMap = {};
+  state.characters.forEach(c => { charMap[c.id] = c.name; });
+
+  const decisionsData = {
+    characters: state.characters,
+    rows: state.rows.map(r => ({
+      speaker: r.speaker,
+      listener: r.listener,
+      from: r.from,
+      to: r.to,
+      group: r.group,
+      role: r.role,
+      self: r.self,
+      you: r.you,
+      name: r.name,
+      status: r.status,
+      evidence: r.evidence
+    }))
+  };
+
+  downloadFile('xungho_decisions.json', JSON.stringify(decisionsData, null, 2), 'application/json');
+
+  setTimeout(() => {
+    const lockedRows = state.rows.filter(r => r.status === 'locked');
+    const txtLines = lockedRows.map(r => {
+      const sName = charMap[r.speaker] || r.speaker;
+      const lName = charMap[r.listener] || r.listener;
+      const fromStr = (r.from !== null && r.from !== undefined) ? ` [từ chương ${r.from}]` : '';
+      return `${sName} -> ${lName}${fromStr}: tự xưng "${r.self || ''}"; gọi "${r.you || ''}"; tên "${r.name || ''}"`;
+    });
+
+    downloadFile('xungho.txt', txtLines.join('\n'), 'text/plain;charset=utf-8');
+  }, 300);
+}
+
+function downloadFile(filename, content, type) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function getStatusLabel(status) {
+  switch (status) {
+    case 'locked': return 'đã chốt';
+    case 'default': return 'mặc định';
+    case 'empty':
+    default: return 'trống';
+  }
+}
+
+function updateStats() {
+  let empty = 0, def = 0, locked = 0;
+  state.rows.forEach(r => {
+    if (r.status === 'locked') locked++;
+    else if (r.status === 'default') def++;
+    else empty++;
+  });
+  document.getElementById('stat-empty').textContent = empty;
+  document.getElementById('stat-default').textContent = def;
+  document.getElementById('stat-locked').textContent = locked;
+}
+
+function updateFooterInfo() {
+  const store = loadDecisionStore();
+  const count = Object.keys(store).length;
+  const infoEl = document.getElementById('footer-storage-info');
+  if (infoEl) infoEl.textContent = `Kho quyết định: ${count} mục`;
+}
+
+function updateRowDOM(key) {
+  const tr = document.querySelector(`tr[data-key="${CSS.escape(key)}"]`);
+  if (!tr) return;
+  const row = state.rows.find(r => getRowKey(r) === key);
+  if (!row) return;
+
+  const tag = tr.querySelector('.tag-status');
+  if (tag) {
+    tag.className = `tag-status ${escapeHtml(row.status)}`;
+    tag.textContent = getStatusLabel(row.status);
+  }
+}
+
+function renderCharacters() {
+  const container = document.getElementById('char-list-container');
+  const query = state.searchCharQuery.toLowerCase().trim();
+
+  const countMap = {};
+  state.rows.forEach(r => {
+    countMap[r.speaker] = (countMap[r.speaker] || 0) + 1;
+  });
+
+  const filteredChars = state.characters.filter(c => {
+    if (!query) return true;
+    return (c.name && c.name.toLowerCase().includes(query)) || (c.id && c.id.toLowerCase().includes(query));
+  });
+
+  const isAllActive = state.selectedSpeaker === null;
+  let html = `
+    <div class="char-item ${isAllActive ? 'active' : ''}" data-action="select-speaker" data-speaker-id="">
+      <div style="display: flex; align-items: center; min-width: 0;">
+        <div class="char-avatar" style="background: var(--bg-surface);">ALL</div>
+        <div class="char-details">
+          <span class="char-name">Tất cả</span>
+          <span class="char-meta">Toàn bộ nhân vật</span>
+        </div>
+      </div>
+      <span class="badge-mono">${state.rows.length}</span>
+    </div>
+  `;
+
+  filteredChars.forEach(c => {
+    const isAct = state.selectedSpeaker === c.id;
+    const cnt = countMap[c.id] || 0;
+    const genderVi = c.gender === 'male' ? 'Nam' : (c.gender === 'female' ? 'Nữ' : 'Khác');
+    const genderCls = c.gender === 'male' ? 'gender-male' : (c.gender === 'female' ? 'gender-female' : 'gender-other');
+    const initial = c.name ? c.name.charAt(0) : '?';
+
+    html += `
+      <div class="char-item ${isAct ? 'active' : ''}" data-action="select-speaker" data-speaker-id="${escapeHtml(c.id)}">
+        <div style="display: flex; align-items: center; min-width: 0; flex: 1;">
+          <div class="char-avatar">${escapeHtml(initial)}</div>
+          <div class="char-details">
+            <span class="char-name" title="${escapeHtml(c.name)}">${escapeHtml(c.name)}</span>
+            <span class="char-meta">
+              <span class="gender-badge ${genderCls}">${escapeHtml(genderVi)}</span>
+              <span style="font-family: var(--font-mono); color: #64748b;">${escapeHtml(c.id)}</span>
+            </span>
+          </div>
+        </div>
+        <span class="badge-mono">${cnt}</span>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
+function getFilteredRows() {
+  return state.rows.filter(r => {
+    if (state.selectedSpeaker !== null && r.speaker !== state.selectedSpeaker) return false;
+    if (state.filterStatus !== 'all' && r.status !== state.filterStatus) return false;
+    return true;
+  });
+}
+
+function renderTable() {
+  const tbody = document.getElementById('table-body');
+  const countDisplay = document.getElementById('row-count-display');
+
+  const charMap = {};
+  state.characters.forEach(c => { charMap[c.id] = c.name; });
+
+  const filteredRows = getFilteredRows();
+  const totalRows = filteredRows.length;
+  const totalPages = Math.max(1, Math.ceil(totalRows / PAGE_SIZE));
+
+  if (state.currentPage > totalPages) {
+    state.currentPage = totalPages;
+  }
+  if (state.currentPage < 1) {
+    state.currentPage = 1;
+  }
+
+  const startIndex = (state.currentPage - 1) * PAGE_SIZE;
+  const pagedRows = filteredRows.slice(startIndex, startIndex + PAGE_SIZE);
+
+  countDisplay.textContent = `Hiển thị: ${pagedRows.length} / ${totalRows} dòng (Tổng: ${state.rows.length} dòng)`;
+  
+  const pageStr = `Trang ${state.currentPage} / ${totalPages}`;
+  document.getElementById('pagination-info-top').textContent = pageStr;
+  document.getElementById('pagination-info-bottom').textContent = pageStr;
+
+  const prevDisabled = state.currentPage <= 1;
+  const nextDisabled = state.currentPage >= totalPages;
+
+  document.getElementById('btn-prev-page-top').disabled = prevDisabled;
+  document.getElementById('btn-prev-page-bottom').disabled = prevDisabled;
+  document.getElementById('btn-next-page-top').disabled = nextDisabled;
+  document.getElementById('btn-next-page-bottom').disabled = nextDisabled;
+
+  if (pagedRows.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="9" class="text-center" style="color: var(--text-muted); padding: 50px 0;">Không có dữ liệu phù hợp với bộ lọc hiện tại.</td></tr>`;
+    return;
+  }
+
+  let html = '';
+  pagedRows.forEach(r => {
+    const key = getRowKey(r);
+    const isSelected = state.selectedRowKey === key;
+    const sName = charMap[r.speaker] || r.speaker;
+    const lName = charMap[r.listener] || r.listener;
+    const rangeText = (r.from !== null && r.from !== undefined) ? `Ch.${r.from}${r.to ? ' - ' + r.to : ' trở đi'}` : 'Toàn bộ';
+    const statusLabel = getStatusLabel(r.status);
+
+    html += `
+      <tr class="${isSelected ? 'selected' : ''}" data-key="${escapeHtml(key)}" style="cursor: pointer;">
+        <td style="font-weight: 600; color: #fff;">${escapeHtml(sName)}</td>
+        <td style="color: #cbd5e1;">${escapeHtml(lName)}</td>
+        <td style="font-family: var(--font-mono); color: var(--text-muted); font-size: 11px;">${escapeHtml(rangeText)}</td>
+        <td>
+          <span style="display: inline-block; padding: 2px 6px; border-radius: 3px; background: var(--bg-surface); border: 1px solid var(--border-color); font-size: 11px; color: #d1d5db;">
+            ${escapeHtml(r.group || '')}
+          </span>
+        </td>
+        <td>
+          <input type="text" class="table-input" data-action="edit-cell" data-field="self" data-key="${escapeHtml(key)}" value="${escapeHtml(r.self)}" placeholder="tôi/ta...">
+        </td>
+        <td>
+          <input type="text" class="table-input" data-action="edit-cell" data-field="you" data-key="${escapeHtml(key)}" value="${escapeHtml(r.you)}" placeholder="cậu/ngươi...">
+        </td>
+        <td>
+          <input type="text" class="table-input" data-action="edit-cell" data-field="name" data-key="${escapeHtml(key)}" value="${escapeHtml(r.name)}" placeholder="gọi tên...">
+        </td>
+        <td>
+          <span class="tag-status ${escapeHtml(r.status)}">${escapeHtml(statusLabel)}</span>
+        </td>
+        <td style="text-align: center;">
+          <button type="button" class="btn btn-sm" data-action="lock-row" data-key="${escapeHtml(key)}" style="padding: 2px 7px;">
+            Chốt
+          </button>
+        </td>
+      </tr>
+    `;
+  });
+
+  tbody.innerHTML = html;
+}
+
+function renderEvidence() {
+  const container = document.getElementById('evidence-container');
+  if (!state.selectedRowKey) {
+    container.innerHTML = `<div style="text-align: center; color: var(--text-muted); font-size: 12px; margin-top: 60px; padding: 0 16px;">Chọn một dòng trong bảng danh sách để kiểm tra ngữ cảnh câu thoại và bằng chứng trích dẫn.</div>`;
+    return;
+  }
+
+  const row = state.rows.find(r => getRowKey(r) === state.selectedRowKey);
+  if (!row) {
+    container.innerHTML = `<div style="text-align: center; color: var(--text-muted); font-size: 12px; margin-top: 60px;">Không tìm thấy thông tin dòng đã chọn.</div>`;
+    return;
+  }
+
+  const charMap = {};
+  state.characters.forEach(c => { charMap[c.id] = c.name; });
+  const sName = charMap[row.speaker] || row.speaker;
+  const lName = charMap[row.listener] || row.listener;
+  const rangeText = (row.from !== null && row.from !== undefined) ? `Chương ${row.from}${row.to ? ' đến ' + row.to : ' trở đi'}` : 'Toàn bộ truyện';
+
+  let roleText = '';
+  if (row.role === 'senior') roleText = ` | Vai: Người trên (senior)`;
+  else if (row.role === 'junior') roleText = ` | Vai: Người dưới (junior)`;
+
+  let evidenceListHtml = '';
+  if (Array.isArray(row.evidence) && row.evidence.length > 0) {
+    evidenceListHtml = row.evidence.map(ev => `
+      <div class="evidence-quote-item">
+        <div class="evidence-quote-header">Chương ${escapeHtml(ev.ch)}</div>
+        <div class="evidence-quote-body">“${escapeHtml(ev.text)}”</div>
+      </div>
+    `).join('');
+  } else {
+    evidenceListHtml = `<div style="color: var(--text-muted); font-size: 12px; padding: 8px;">Không có câu trích dẫn đính kèm.</div>`;
+  }
+
+  container.innerHTML = `
+    <div class="evidence-card">
+      <div style="font-size: 13.5px; font-weight: 700; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+        <span>${escapeHtml(sName)}</span>
+        <span style="color: var(--text-muted); font-size: 11px;">➔</span>
+        <span>${escapeHtml(lName)}</span>
+      </div>
+      <div style="font-size: 11.5px; color: var(--text-muted); line-height: 1.6;">
+        <div>Nhóm quan hệ: <strong style="color: #e2e4e9;">${escapeHtml(row.group || 'Chưa phân nhóm')}</strong>${escapeHtml(roleText)}</div>
+        <div>Phạm vi: <span style="color: #cbd5e1; font-family: var(--font-mono);">${escapeHtml(rangeText)}</span></div>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+      <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.03em;">Trích dẫn ngữ cảnh</span>
+      <span class="badge-mono">${row.evidence ? row.evidence.length : 0} câu</span>
+    </div>
+
+    <div>
+      ${evidenceListHtml}
+    </div>
+  `;
+}
+
+function render() {
+  updateStats();
+  renderCharacters();
+  renderTable();
+  renderEvidence();
+  updateFooterInfo();
+}
+
+function validateAndSaveRules() {
+  try {
+    const rawText = document.getElementById('rules-editor').value;
+    let parsed;
+    try {
+      parsed = JSON.parse(rawText);
+    } catch (e) {
+      alert('Lỗi cú pháp JSON: ' + e.message);
+      return;
+    }
+
+    if (!Array.isArray(parsed)) {
+      alert('Lỗi định dạng: Danh sách quy tắc phải là một mảng JSON [ ... ].');
+      return;
+    }
+
+    for (let i = 0; i < parsed.length; i++) {
+      const item = parsed[i];
+      if (typeof item !== 'object' || item === null || Array.isArray(item)) {
+        alert(`Lỗi định dạng: Quy tắc thứ ${i + 1} không hợp lệ (phải là object với các trường kiểu chuỗi)`);
+        return;
+      }
+
+      for (const key of Object.keys(item)) {
+        if (item[key] !== null && item[key] !== undefined && typeof item[key] !== 'string') {
+          alert(`Lỗi định dạng: Quy tắc thứ ${i + 1} không hợp lệ (phải là object với các trường kiểu chuỗi). Trường "${key}" không phải là chuỗi.`);
+          return;
+        }
+      }
+    }
+
+    state.rules = parsed;
+    saveRulesToStorage();
+    alert('Đã lưu quy tắc thành công và kiểm duyệt cấu trúc hợp lệ!');
+  } catch (err) {
+    alert('Có lỗi xảy ra khi xử lý quy tắc: ' + err.message);
+  }
+}
+
+function setupEventDelegation() {
+  // 1. Delegation trên danh sách nhân vật
+  const charListContainer = document.getElementById('char-list-container');
+  charListContainer.addEventListener('click', (e) => {
+    const item = e.target.closest('[data-action="select-speaker"]');
+    if (!item) return;
+
+    const speakerId = item.getAttribute('data-speaker-id');
+    state.selectedSpeaker = speakerId ? speakerId : null;
+    state.currentPage = 1;
+    renderCharacters();
+    renderTable();
+  });
+
+  // 2. Delegation trên bảng dữ liệu
+  const tableBody = document.getElementById('table-body');
+  
+  tableBody.addEventListener('click', (e) => {
+    const lockBtn = e.target.closest('[data-action="lock-row"]');
+    if (lockBtn) {
+      e.stopPropagation();
+      const key = lockBtn.getAttribute('data-key');
+      lockRow(key);
+      return;
+    }
+
+    if (e.target.tagName === 'INPUT') {
+      return;
+    }
+
+    const tr = e.target.closest('tr[data-key]');
+    if (tr) {
+      const key = tr.getAttribute('data-key');
+      state.selectedRowKey = key;
+      document.querySelectorAll('#table-body tr').forEach(r => {
+        r.classList.toggle('selected', r.getAttribute('data-key') === key);
+      });
+      renderEvidence();
+    }
+  });
+
+  tableBody.addEventListener('change', (e) => {
+    const input = e.target.closest('[data-action="edit-cell"]');
+    if (!input) return;
+
+    const key = input.getAttribute('data-key');
+    const field = input.getAttribute('data-field');
+    const value = input.value;
+    handleCellEdit(key, field, value);
+  });
+
+  // 3. Phân trang
+  const handlePagination = (action) => {
+    const filteredRows = getFilteredRows();
+    const totalPages = Math.max(1, Math.ceil(filteredRows.length / PAGE_SIZE));
+    if (action === 'prev-page' && state.currentPage > 1) {
+      state.currentPage--;
+      renderTable();
+    } else if (action === 'next-page' && state.currentPage < totalPages) {
+      state.currentPage++;
+      renderTable();
+    }
+  };
+
+  document.querySelectorAll('[data-action="prev-page"]').forEach(btn => {
+    btn.addEventListener('click', () => handlePagination('prev-page'));
+  });
+  document.querySelectorAll('[data-action="next-page"]').forEach(btn => {
+    btn.addEventListener('click', () => handlePagination('next-page'));
+  });
+
+  // 4. Lọc trạng thái
+  document.getElementById('filter-status').addEventListener('change', (e) => {
+    state.filterStatus = e.target.value;
+    state.currentPage = 1;
+    renderTable();
+  });
+
+  // 5. Tìm kiếm nhân vật
+  document.getElementById('input-search-char').addEventListener('input', (e) => {
+    state.searchCharQuery = e.target.value;
+    renderCharacters();
+  });
+
+  // 6. Nút Dữ liệu mẫu
+  document.getElementById('btn-sample-data').addEventListener('click', () => {
+    const confirmMessage = "Dữ liệu mẫu sẽ thay thế dữ liệu đang hiển thị (quyết định đã lưu không bị xóa). Tiếp tục?";
+    if (confirm(confirmMessage)) {
+      loadFromData(SAMPLE_DATA, true);
+    }
+  });
+
+  // 7. Mở file JSON
+  document.getElementById('file-input').addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      try {
+        const json = JSON.parse(evt.target.result);
+        loadFromData(json, false);
+      } catch (err) {
+        alert('File không hợp lệ: ' + err.message);
+      }
+      e.target.value = '';
+    };
+    reader.readAsText(file, 'utf-8');
+  });
+
+  // 8. Quản lý Quy tắc
+  document.getElementById('btn-toggle-rules').addEventListener('click', () => {
+    const panel = document.getElementById('rules-panel');
+    panel.classList.toggle('open');
+  });
+
+  document.getElementById('btn-save-rules').addEventListener('click', validateAndSaveRules);
+
+  document.getElementById('btn-reset-rules').addEventListener('click', () => {
+    if (!confirm('Khôi phục danh sách quy tắc về mặc định ban đầu?')) return;
+    state.rules = JSON.parse(JSON.stringify(DEFAULT_RULES));
+    document.getElementById('rules-editor').value = JSON.stringify(state.rules, null, 2);
+    saveRulesToStorage();
+    alert('Đã khôi phục quy tắc mặc định!');
+  });
+
+  document.getElementById('btn-apply-rules').addEventListener('click', applyRules);
+
+  // 9. Nút xuất file
+  document.getElementById('btn-export').addEventListener('click', exportFiles);
+  document.getElementById('btn-banner-export').addEventListener('click', exportFiles);
+  document.getElementById('btn-close-banner').addEventListener('click', hideStorageAlert);
+}
+
+function init() {
+  loadRules();
+  document.getElementById('rules-editor').value = JSON.stringify(state.rules, null, 2);
+
+  // Khôi phục dữ liệu từ STORAGE_KEY_DATASET nếu có
+  let restored = false;
+  try {
+    const savedData = localStorage.getItem(STORAGE_KEY_DATASET);
+    if (savedData) {
+      const parsed = JSON.parse(savedData);
+      if (parsed.characters && parsed.rows) {
+        const store = loadDecisionStore();
+        state.characters = parsed.characters;
+        state.rows = mergeDecisionsIntoRows(parsed.rows, store);
+        if (state.rows.length > 0) {
+          state.selectedRowKey = getRowKey(state.rows[0]);
+        }
+        restored = true;
+      }
+    }
+  } catch (e) {
+    console.error('Lỗi khi khôi phục dataset:', e);
+  }
+
+  if (!restored) {
+    state.characters = [];
+    state.rows = [];
+    state.selectedRowKey = null;
+  }
+
+  setupEventDelegation();
+  render();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body></html>

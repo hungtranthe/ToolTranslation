@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-container-high': '#2a2a2d', 'on-error': '#690005', 'on-tertiary': '#5d1900', 'primary': '#b3c5ff', 'surface-container-highest': '#353438', 'tertiary-fixed': '#ffdbd0', 'on-secondary': '#003824', 'secondary': '#4edea3', 'inverse-on-surface': '#303033', 'on-error-container': '#ffdad6', 'on-primary-container': '#f8f7ff', 'tertiary': '#ffb59d', 'on-surface': '#e4e1e6', 'inverse-primary': '#0054d6', 'surface-bright': '#39393c', 'outline': '#8c90a1', 'surface-dim': '#131316', 'secondary-fixed-dim': '#4edea3', 'tertiary-container': '#cc4204', 'error-container': '#93000a', 'on-primary-fixed-variant': '#003fa4', 'outline-variant': '#424656', 'primary-fixed': '#dae1ff', 'on-secondary-fixed': '#002113', 'primary-fixed-dim': '#b3c5ff', 'on-background': '#e4e1e6', 'on-secondary-fixed-variant': '#005236', 'secondary-container': '#00a572', 'inverse-surface': '#e4e1e6', 'on-tertiary-fixed': '#390c00', 'on-secondary-container': '#00311f', 'on-primary': '#002b75', 'primary-container': '#0066ff', 'secondary-fixed': '#6ffbbe', 'surface-container-low': '#1b1b1e', 'on-tertiary-container': '#fff6f4', 'surface-container': '#1f1f22', 'surface': '#131316', 'surface-tint': '#b3c5ff', 'on-tertiary-fixed-variant': '#832600', 'surface-container-lowest': '#0e0e11', 'tertiary-fixed-dim': '#ffb59d', 'error': '#ffb4ab', 'on-surface-variant': '#c2c6d8', 'surface-variant': '#353438', 'background': '#131316', 'on-primary-fixed': '#001849' }, borderRadius: { DEFAULT: '0.125rem', lg: '0.25rem', xl: '0.5rem', full: '0.75rem' }, spacing: { gutter: '0.5rem', 'space-lg': '0.75rem', 'margin-desktop': '0.75rem', 'space-xs': '0.125rem', 'space-sm': '0.25rem', 'gutter-desktop': '0.75rem', 'space-xl': '1rem', margin: '0.5rem', 'space-md': '0.5rem', 'space-2xl': '1.5rem' }, fontFamily: { 'headline-md': ['Geist'], 'body-sm': ['Inter'], 'code-sm': ['JetBrains Mono'], 'body-lg': ['Inter'], 'headline-sm': ['Geist'], 'headline-lg': ['Geist'], 'label-md': ['Inter'], 'label-sm': ['Inter'], 'body-md': ['Inter'] }, fontSize: { 'headline-md': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '-0.01em', fontWeight: '600' }], 'body-sm': ['0.75rem', { lineHeight: '1.125rem', fontWeight: '400' }], 'code-sm': ['0.75rem', { lineHeight: '1.125rem', fontWeight: '400' }], 'body-lg': ['0.9375rem', { lineHeight: '1.6rem', fontWeight: '400' }], 'headline-sm': ['1rem', { lineHeight: '1.5rem', letterSpacing: '-0.005em', fontWeight: '600' }], 'headline-lg': ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.02em', fontWeight: '600' }], 'label-md': ['0.8125rem', { lineHeight: '1.25rem', letterSpacing: '0.01em', fontWeight: '500' }], 'label-sm': ['0.6875rem', { lineHeight: '1rem', letterSpacing: '0.02em', fontWeight: '500' }], 'body-md': ['0.8125rem', { lineHeight: '1.375rem', fontWeight: '400' }] } } } };</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface select-none min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-8 px-space-md flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-primary text-[16px]">translate</span><span class="font-headline-sm text-label-sm text-on-surface tracking-tight">Trình dịch tiểu thuyết Trung → Việt — Quản lý tác phẩm và thuật ngữ</span><div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container-high"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-code-sm text-code-sm text-secondary">Ollama 127.0.0.1:11434</span><span class="text-outline-variant font-code-sm text-code-sm">/</span><span class="font-code-sm text-code-sm text-on-surface-variant">Qwen-2.5-14B</span></div></div><div class="flex items-center gap-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex items-center"><button aria-label="Minimize window" class="w-8 h-6 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[14px]">minimize</span></button><button aria-label="Maximize window" class="w-8 h-6 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[13px]">check_box_outline_blank</span></button><button aria-label="Close window" class="w-8 h-6 flex items-center justify-center text-on-surface-variant hover:bg-error-container hover:text-on-error-container" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button></div></div></div><div class="h-8 px-space-md bg-surface-container-low flex items-center justify-between text-code-sm font-code-sm text-on-surface-variant"><div class="flex items-center gap-space-lg overflow-hidden whitespace-nowrap"><div class="flex items-center gap-space-xs"><span class="text-primary font-label-sm text-label-sm uppercase tracking-wider">Nguồn:</span><span class="text-on-surface px-space-sm py-0.5 rounded bg-surface-container-high text-code-sm">D:\TruyenA\TieuThuyet_DaiQuanGia.txt</span></div><div class="flex items-center gap-space-xs"><span class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Đích:</span><span class="text-on-surface px-space-sm py-0.5 rounded bg-surface-container-high text-code-sm">D:\TruyenA\</span></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-on-surface transition-colors font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[14px] text-primary">folder_open</span>Mở thư mục đích</button><button class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-on-surface transition-colors font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[14px] text-primary">sync</span>Đồng bộ cấu hình</button></div></div></header><aside class="fixed left-0 top-16 bottom-7 w-64 bg-surface-container-low z-40 flex flex-col justify-between py-space-sm"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-md py-space-xs text-outline font-label-sm text-label-sm uppercase tracking-wider">Các phân hệ xử lý</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="tong-quan-&amp;-cau-hinh" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>A. Tổng quan &amp; Cấu hình</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="bao-cao-tac-pham" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>B. Báo cáo tác phẩm</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="nhan-vat-moc" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span>C. Nhân vật mốc</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="goi-y-moegirl" href="#"><span class="material-symbols-outlined text-[18px]">lightbulb</span><span>D. Gợi ý Moegirl</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="quan-ly-glossary" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>E. Quản lý Glossary</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="dich-&amp;-tien-trinh" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span><span>F. Dịch &amp; Tiến trình</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="nhat-ky-&amp;-kiem-tra" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>G. Nhật ký &amp; Kiểm tra</span></a></nav></div><div class="px-space-md py-space-sm mx-space-sm rounded bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between text-label-sm font-label-sm text-outline"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">database</span>Bộ nhớ TM/Glossary</span><span class="text-primary font-code-sm text-code-sm">42,819 mục</span></div><div class="flex items-center justify-between text-label-sm font-label-sm text-outline"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">batch_prediction</span>Hàng đợi dịch</span><span class="text-secondary font-code-sm text-code-sm">24 chương</span></div></div></aside><div class="pl-64"><main class="relative pt-16 pb-7 w-full px-space-md min-h-screen bg-surface"><div class="flex flex-col w-full gap-space-md">
+<!-- Top Command & Filter Deck -->
+<section class="bg-surface-container-low p-space-md rounded shadow-sm flex flex-col gap-space-md">
+<!-- Row 1: Log Level Filters + System Health Pulse -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="log-filter-btn flex items-center gap-space-xs px-space-md py-1 rounded bg-surface-container-high text-on-surface text-label-sm font-label-sm transition-all shadow-sm" data-level="ALL" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Tất cả</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 bg-surface-container-highest text-primary rounded">1,420</span>
+</button>
+<button class="log-filter-btn flex items-center gap-space-xs px-space-md py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high text-label-sm font-label-sm transition-all" data-level="INFO" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>INFO</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 bg-surface-container-high text-on-surface-variant rounded">1,350</span>
+</button>
+<button class="log-filter-btn flex items-center gap-space-xs px-space-md py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high text-label-sm font-label-sm transition-all" data-level="SUCCESS" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>SUCCESS</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 bg-surface-container-high text-secondary rounded">62</span>
+</button>
+<button class="log-filter-btn flex items-center gap-space-xs px-space-md py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high text-label-sm font-label-sm transition-all" data-level="WARNING" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>WARNING</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 bg-surface-container-high text-tertiary rounded">6</span>
+</button>
+<button class="log-filter-btn flex items-center gap-space-xs px-space-md py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high text-label-sm font-label-sm transition-all" data-level="ERROR" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>ERROR</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 bg-surface-container-high text-error rounded">2</span>
+</button>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+<span>Inference Pipe: Ổn định</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-lg py-1 rounded bg-primary-container text-on-primary-container hover:bg-primary-container/90 transition-colors text-label-md font-label-md shadow-sm" id="btn-run-guard" type="button">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span>Chạy kiểm tra bản dịch (Run Translation Guard)</span>
+</button>
+</div>
+</div>
+<!-- Row 2: Search Input & Action Control Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="relative flex-1 min-w-[280px] max-w-xl">
+<span class="material-symbols-outlined text-outline absolute left-2 top-1.5 text-[16px]">search</span>
+<input class="w-full h-7 pl-7 pr-16 bg-surface-container text-on-surface placeholder:text-outline text-code-sm font-code-sm rounded focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="log-search-input" placeholder="Tìm kiếm log (regex, timestamp, chunk_id)..." type="text"/>
+<div class="absolute right-1 top-1 flex items-center gap-0.5">
+<button class="px-1 text-[10px] font-code-sm rounded text-outline hover:text-on-surface hover:bg-surface-container-highest" title="Match Case" type="button">Aa</button>
+<button class="px-1 text-[10px] font-code-sm rounded text-primary bg-surface-container-highest" title="Regex Mode" type="button">.*</button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-colors" id="btn-clear" type="button">
+<span class="material-symbols-outlined text-[15px] text-tertiary">backspace</span>
+<span>Xóa hiển thị</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-colors" id="btn-export" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">download</span>
+<span>Lưu file (.log)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-error">error</span>
+<span>Mở error.log</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">data_object</span>
+<span>Mở progress.json</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Log Terminal Canvas & Inspection Split -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- Log Console Window (Span 9) -->
+<div class="xl:col-span-9 bg-surface-container-lowest rounded shadow-md flex flex-col h-[520px] overflow-hidden">
+<!-- Terminal Header Bar -->
+<div class="h-7 px-space-md bg-surface-container-low flex items-center justify-between text-code-sm font-code-sm text-outline select-none">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-on-surface-variant font-code-sm text-code-sm">STDOUT / STDERR STREAM [Live Output]</span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-primary">10 sự kiện mới nhất</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-code-sm text-code-sm text-outline">Buffer: 1,420 lines</span>
+<span class="material-symbols-outlined text-[14px] text-outline cursor-pointer hover:text-primary">fullscreen</span>
+</div>
+</div>
+<!-- Real-time Console Log Stream Area -->
+<div class="flex-1 p-space-md overflow-y-auto font-code-sm text-code-sm flex flex-col gap-1.5 select-text" id="log-terminal">
+<!-- Log Line 1 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded hover:bg-surface-container-high/40 transition-colors" data-type="INFO">
+<span class="px-1.5 py-0.2 rounded bg-primary-container/20 text-primary font-code-sm text-code-sm font-medium shrink-0">[INFO]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:00:01]</span>
+<span class="text-on-surface font-code-sm text-code-sm">Khởi động GUI Trình dịch tiểu thuyết Trung -&gt; Việt v2.4. Đọc <span class="text-primary underline decoration-dotted">config.json</span> thành công.</span>
+</div>
+<!-- Log Line 2 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded hover:bg-surface-container-high/40 transition-colors" data-type="INFO">
+<span class="px-1.5 py-0.2 rounded bg-primary-container/20 text-primary font-code-sm text-code-sm font-medium shrink-0">[INFO]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:00:02]</span>
+<span class="text-on-surface font-code-sm text-code-sm">Kết nối máy chủ Ollama <span class="text-secondary">http://127.0.0.1:11434</span> thành công. Model <span class="text-primary font-medium">qwen2.5:14b-instruct-q5_K_M</span> đã sẵn sàng.</span>
+</div>
+<!-- Log Line 3 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded hover:bg-surface-container-high/40 transition-colors" data-type="INFO">
+<span class="px-1.5 py-0.2 rounded bg-primary-container/20 text-primary font-code-sm text-code-sm font-medium shrink-0">[INFO]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:00:03]</span>
+<span class="text-on-surface font-code-sm text-code-sm">Nạp glossary <span class="text-on-surface-variant">D:\TruyenA\thuatngu.txt</span>: Đã tải <span class="text-primary font-medium">412 thuật ngữ</span> hợp lệ (388 force, 24 hint).</span>
+</div>
+<!-- Log Line 4 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded hover:bg-surface-container-high/40 transition-colors" data-type="SUCCESS">
+<span class="px-1.5 py-0.2 rounded bg-secondary-container/30 text-secondary font-code-sm text-code-sm font-medium shrink-0">[SUCCESS]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:00:05]</span>
+<span class="text-on-surface font-code-sm text-code-sm">Khởi tạo Aho-Corasick automaton cho <span class="text-secondary font-medium">128 nhân vật mốc</span> và 412 thuật ngữ. (Thời gian dựng index: 14.8ms)</span>
+</div>
+<!-- Log Line 5 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded hover:bg-surface-container-high/40 transition-colors" data-type="INFO">
+<span class="px-1.5 py-0.2 rounded bg-primary-container/20 text-primary font-code-sm text-code-sm font-medium shrink-0">[INFO]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:00:10]</span>
+<span class="text-on-surface font-code-sm text-code-sm">Phân tích file nguồn <span class="text-on-surface-variant">D:\TruyenA\TieuThuyet_DaiQuanGia.txt</span> (GB18030 -&gt; UTF-8 normalized). Tổng 120 chương, dự kiến 740 chunks.</span>
+</div>
+<!-- Log Line 6 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded hover:bg-surface-container-high/40 transition-colors" data-type="INFO">
+<span class="px-1.5 py-0.2 rounded bg-primary-container/20 text-primary font-code-sm text-code-sm font-medium shrink-0">[INFO]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:00:12]</span>
+<span class="text-on-surface font-code-sm text-code-sm">Phát hiện tiến độ cũ: Đã dịch tới <span class="text-secondary font-medium">Chunk #148</span>. Chế độ tiếp tục (Resume) được kích hoạt.</span>
+</div>
+<!-- Log Line 7 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded hover:bg-surface-container-high/40 transition-colors" data-type="WARNING">
+<span class="px-1.5 py-0.2 rounded bg-tertiary-container/30 text-tertiary font-code-sm text-code-sm font-medium shrink-0">[WARNING]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:15:22]</span>
+<span class="text-on-surface font-code-sm text-code-sm"><span class="text-tertiary font-medium">[CHUNK_85]</span> Lần gọi 1 timeout sau 30s. Kích hoạt Retry lần 1/3 với nhiệt độ giảm 0.2 (temp=0.4).</span>
+</div>
+<!-- Log Line 8 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded hover:bg-surface-container-high/40 transition-colors" data-type="SUCCESS">
+<span class="px-1.5 py-0.2 rounded bg-secondary-container/30 text-secondary font-code-sm text-code-sm font-medium shrink-0">[SUCCESS]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:15:35]</span>
+<span class="text-on-surface font-code-sm text-code-sm"><span class="text-secondary font-medium">[CHUNK_85]</span> Retry lần 1 thành công. Chunk hợp lệ, checksum b8e4a91 xác thực xong.</span>
+</div>
+<!-- Log Line 9 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded bg-error-container/20 hover:bg-error-container/30 transition-colors" data-type="ERROR">
+<span class="px-1.5 py-0.2 rounded bg-error text-on-error font-code-sm text-code-sm font-semibold shrink-0">[ERROR]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:22:10]</span>
+<span class="text-on-surface font-code-sm text-code-sm"><span class="text-error font-medium">[GUARD_WARNING]</span> <span class="text-primary">[CHUNK_112]</span> Phát hiện ký tự Hán tự sót lại: <span class="text-error bg-error-container/40 px-1 rounded font-bold">萧炎</span> chưa chuyển đổi hoàn chỉnh. Tự động áp dụng fallback glossary force: <span class="text-secondary font-bold">Tiêu Viêm</span>.</span>
+</div>
+<!-- Log Line 10 -->
+<div class="log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded hover:bg-surface-container-high/40 transition-colors" data-type="INFO">
+<span class="px-1.5 py-0.2 rounded bg-primary-container/20 text-primary font-code-sm text-code-sm font-medium shrink-0">[INFO]</span>
+<span class="text-outline font-code-sm text-code-sm shrink-0">[14:28:02]</span>
+<span class="text-on-surface font-code-sm text-code-sm"><span class="text-primary font-medium">[PROGRESS_SAVE]</span> Đã ghi nguyên tử file <span class="text-on-surface-variant font-medium">D:\TruyenA\bandich.txt.progress.json</span> (148/740 chunks, 20.0%).</span>
+</div>
+<div class="flex items-center gap-space-sm text-outline text-code-sm font-code-sm pt-2" id="live-indicator-row">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>Đang lắng nghe luồng sự kiện từ Translation Worker daemon (ID: 0x4f8a)...</span>
+</div>
+</div>
+<!-- Console Micro-Footer Control -->
+<div class="h-8 px-space-md bg-surface-container flex items-center justify-between text-code-sm font-code-sm">
+<label class="flex items-center gap-space-sm text-on-surface cursor-pointer select-none">
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container-highest text-primary accent-primary" id="auto-scroll-toggle" type="checkbox"/>
+<span class="text-label-sm font-label-sm">Tự động cuộn xuống cuối (Auto-scroll)</span>
+</label>
+<div class="flex items-center gap-space-md text-outline">
+<span class="text-label-sm font-label-sm">Bộ nhớ đệm: 48.2 KB</span>
+<span class="text-label-sm font-label-sm text-secondary">Encoding: UTF-8 CRLF</span>
+</div>
+</div>
+</div>
+<!-- Right Side Inspection / Real-time Analytics (Span 3) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Guard Quick Stats Card -->
+<div class="bg-surface-container-low rounded p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Chỉ số Kiểm duyệt</span>
+<span class="text-primary font-code-sm text-code-sm bg-surface-container-high px-1.5 py-0.5 rounded">v2.4.1</span>
+</div>
+<!-- SVG Mini Metric Ring & Visual Ratio -->
+<div class="flex items-center gap-space-md bg-surface-container p-space-sm rounded">
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="98.6, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-headline-sm text-label-sm font-bold text-secondary">98.6%</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-label-sm font-label-sm text-outline">Độ sạch ngữ nghĩa</span>
+<span class="text-on-surface font-headline-sm text-headline-sm truncate">Chuẩn hóa cao</span>
+<span class="text-label-sm font-label-sm text-secondary">Không có ảo giác</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container rounded flex flex-col">
+<span class="text-label-sm font-label-sm text-outline">Dấu câu sửa</span>
+<span class="font-code-sm text-headline-sm text-on-surface font-semibold">142</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex flex-col">
+<span class="text-label-sm font-label-sm text-outline">Fallback force</span>
+<span class="font-code-sm text-headline-sm text-tertiary font-semibold">1</span>
+</div>
+</div>
+</div>
+<!-- Live Guard Audit Parameters -->
+<div class="bg-surface-container-low rounded p-space-md shadow-sm flex flex-col gap-space-sm flex-1">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Cấu hình Translation Guard</span>
+<div class="flex flex-col gap-space-xs text-body-sm font-body-sm">
+<div class="flex items-center justify-between p-1 bg-surface-container rounded">
+<span class="text-on-surface-variant">Quét Hán tự sót</span>
+<span class="text-secondary font-code-sm text-code-sm">BẬT (Strict)</span>
+</div>
+<div class="flex items-center justify-between p-1 bg-surface-container rounded">
+<span class="text-on-surface-variant">Kiểm tra lặp câu (Loop)</span>
+<span class="text-secondary font-code-sm text-code-sm">&gt; 3 lần</span>
+</div>
+<div class="flex items-center justify-between p-1 bg-surface-container rounded">
+<span class="text-on-surface-variant">Khử dấu ngoặc kép rỗng</span>
+<span class="text-secondary font-code-sm text-code-sm">Tự động</span>
+</div>
+<div class="flex items-center justify-between p-1 bg-surface-container rounded">
+<span class="text-on-surface-variant">Bộ lọc nhân vật lạc</span>
+<span class="text-secondary font-code-sm text-code-sm">412 entities</span>
+</div>
+</div>
+<div class="mt-auto pt-space-sm">
+<div class="bg-surface-container p-space-sm rounded flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Guard đang kiểm tra song song với luồng dịch Worker.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Inspection & Translation Guard Report Panel -->
+<section class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">policy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Báo cáo Kiểm tra Chất lượng (Translation Guard Report)</h2>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest text-primary font-code-sm text-code-sm">translation_guard.py</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Đánh giá cấu trúc ngữ liệu, tính toàn vẹn ngữ nghĩa và tự động hồi quy thuật ngữ.</p>
+</div>
+</div>
+<!-- Action Trigger -->
+<div class="flex items-center gap-space-sm">
+<span class="text-label-sm font-label-sm text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Đạt chuẩn biên dịch
+        </span>
+</div>
+</div>
+<!-- Guard Findings Cards Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Critical Faults -->
+<div class="bg-surface-container p-space-md rounded flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-label-sm font-label-sm text-outline">Lỗi nghiêm trọng (Critical)</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">0 lỗi</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Không có khối văn bản bị rỗng hay crash</span>
+</div>
+</div>
+<!-- Card 2: Formatting Warnings -->
+<div class="bg-surface-container p-space-md rounded flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-tertiary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[22px]">rule</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-label-sm font-label-sm text-outline">Cảnh báo định dạng &amp; Dấu</span>
+<span class="font-headline-lg text-headline-lg text-tertiary font-bold">2 cảnh báo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Đã tự động sửa dấu câu và khoảng trắng</span>
+</div>
+</div>
+<!-- Card 3: Hallucinations -->
+<div class="bg-surface-container p-space-md rounded flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">psychology_alt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-label-sm font-label-sm text-outline">Hiện tượng Ảo giác (Hallucination)</span>
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">0 ảo giác</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Độ lặp từ đạt ngưỡng an toàn (&lt; 0.05)</span>
+</div>
+</div>
+</div>
+<!-- Active File References & Paths Info Strip -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-wrap items-center justify-between gap-space-md text-code-sm font-code-sm">
+<div class="flex items-center gap-space-lg flex-wrap">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-error text-[15px]">description</span>
+<span class="text-outline">Tệp log lỗi:</span>
+<span class="text-on-surface font-code-sm text-code-sm bg-surface-container px-1.5 py-0.5 rounded">D:\TruyenA\bandich.txt.error.log</span>
+<span class="text-outline font-code-sm text-code-sm">(0.4 KB)</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[15px]">sync_alt</span>
+<span class="text-outline">Tệp tiến độ:</span>
+<span class="text-on-surface font-code-sm text-code-sm bg-surface-container px-1.5 py-0.5 rounded">bandich.txt.progress.json</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-outline font-label-sm text-label-sm">Bảo vệ bộ đệm:</span>
+<span class="text-secondary font-label-sm text-label-sm">Active Lock</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function () {
+    const terminal = document.getElementById('log-terminal');
+    const autoScrollToggle = document.getElementById('auto-scroll-toggle');
+    const searchInput = document.getElementById('log-search-input');
+    const filterButtons = document.querySelectorAll('.log-filter-btn');
+    const clearBtn = document.getElementById('btn-clear');
+    const exportBtn = document.getElementById('btn-export');
+    const runGuardBtn = document.getElementById('btn-run-guard');
+
+    // Auto-scroll execution
+    function scrollToBottom() {
+      if (autoScrollToggle && autoScrollToggle.checked && terminal) {
+        terminal.scrollTop = terminal.scrollHeight;
+      }
+    }
+    scrollToBottom();
+
+    // Filtering by Level
+    let activeLevel = 'ALL';
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-surface-container-high', 'text-on-surface');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container-high', 'text-on-surface');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        activeLevel = btn.getAttribute('data-level');
+        applyFilters();
+      });
+    });
+
+    // Filtering by Search query & level
+    function applyFilters() {
+      const query = (searchInput ? searchInput.value : '').toLowerCase();
+      const rows = terminal.querySelectorAll('.log-row');
+
+      rows.forEach(row => {
+        const type = row.getAttribute('data-type');
+        const text = row.textContent.toLowerCase();
+        const matchesLevel = activeLevel === 'ALL' || type === activeLevel;
+        const matchesQuery = !query || text.includes(query);
+
+        if (matchesLevel && matchesQuery) {
+          row.style.display = 'flex';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+      scrollToBottom();
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilters);
+    }
+
+    // Clear Console
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        const rows = terminal.querySelectorAll('.log-row');
+        rows.forEach(r => r.remove());
+        const emptyNotice = document.createElement('div');
+        emptyNotice.className = 'text-outline font-code-sm text-code-sm py-4 italic';
+        emptyNotice.textContent = '[Màn hình log đã xóa. Sẵn sàng nhận sự kiện mới...]';
+        terminal.prepend(emptyNotice);
+      });
+    }
+
+    // Export Logs Mock
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        const rows = terminal.querySelectorAll('.log-row');
+        let textContent = '';
+        rows.forEach(r => {
+          textContent += r.innerText.replace(/\n+/g, ' ') + '\n';
+        });
+        const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `translation_guard_${new Date().toISOString().slice(0, 10)}.log`;
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+
+    // Interactive Trigger Guard Run
+    if (runGuardBtn) {
+      runGuardBtn.addEventListener('click', () => {
+        runGuardBtn.disabled = true;
+        const originalContent = runGuardBtn.innerHTML;
+        runGuardBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Đang chạy Guard...</span>';
+
+        setTimeout(() => {
+          runGuardBtn.disabled = false;
+          runGuardBtn.innerHTML = originalContent;
+
+          const now = new Date();
+          const timeStr = now.toTimeString().split(' ')[0];
+          const newRow = document.createElement('div');
+          newRow.className = 'log-row flex items-start gap-space-sm leading-relaxed p-0.5 rounded bg-secondary-container/20 transition-colors';
+          newRow.setAttribute('data-type', 'SUCCESS');
+          newRow.innerHTML = `
+            <span class="px-1.5 py-0.2 rounded bg-secondary-container/30 text-secondary font-code-sm text-code-sm font-medium shrink-0">[SUCCESS]</span>
+            <span class="text-outline font-code-sm text-code-sm shrink-0">[${timeStr}]</span>
+            <span class="text-on-surface font-code-sm text-code-sm"><span class="text-secondary font-medium">[GUARD_VERIFIED]</span> Quét toàn diện hoàn tất: 0 Hán tự sót, 0 loop, cấu trúc ngữ pháp Tiếng Việt đạt chuẩn ISO-639.</span>
+          `;
+          const liveRow = document.getElementById('live-indicator-row');
+          terminal.insertBefore(newRow, liveRow);
+          scrollToBottom();
+        }, 900);
+      });
+    }
+  })();
+</script></main></div><footer class="fixed bottom-0 left-0 right-0 h-7 z-50 bg-surface-container-lowest flex items-center justify-between px-space-md text-label-sm font-label-sm text-outline"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[14px]">memory</span><span class="font-code-sm text-code-sm text-on-surface-variant">CPU: 18.4%</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[14px]">storage</span><span class="font-code-sm text-code-sm text-on-surface-variant">RAM: 6.2 / 32 GB</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface">Workers: 4/4 Luồng Đang Chạy</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">speed</span><span class="font-code-sm text-code-sm">Tốc độ: 84 token/s</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span><span class="font-code-sm text-code-sm">Auto-Save: Bật</span></div><button class="hover:text-primary transition-colors flex items-center gap-space-xs font-code-sm text-code-sm" type="button"><span class="material-symbols-outlined text-[14px]">folder</span>D:\TruyenA\</button></div></footer></body></html>

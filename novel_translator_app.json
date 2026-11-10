@@ -1,0 +1,14 @@
+{
+  "recent": [
+    "D:\\8man\\Ciweimao\\Chính trị và pháp luật hệ Hikigaya Hachiman\\Chính trị và pháp luật hệ Hikigaya Hachiman.txt",
+    "D:\\8man\\Ciweimao\\Trọng lực khiến cho ta trở nên mạnh mẽ\\Trọng lực khiến cho ta trở nên mạnh mẽ.txt"
+  ],
+  "last_source": "D:\\8man\\Ciweimao\\Chính trị và pháp luật hệ Hikigaya Hachiman\\Chính trị và pháp luật hệ Hikigaya Hachiman.txt",
+  "deepseek": {
+    "api_keys": [
+      "sk-2cff376d050f497283107974ccbf9f46"
+    ],
+    "model": "deepseek-flash",
+    "base_url": "https://api.deepseek.com"
+  }
+}
